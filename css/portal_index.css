@@ -1,0 +1,111 @@
+/*******************************************************************************************
+--------------------- FEUILLE DE STYLE PORTAIL DE L'INDEX DU DEVELOPPEMENT DURABLE.
+********************************************************************************************/
+
+.h1, .h2, .h3, .h4, h1, h2, h3, h4{
+	color:#2D4059;
+}
+
+/*--------NAVBAR------*/
+a.navbar-brand{
+	font-weight: 300;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+	color: #ecf0f1;
+    background-color: rgba(255, 255, 255, 0.23);
+}
+.navbar-brand>img {
+	display: inline-block;
+	margin-top: -3px;
+}
+
+
+/*--------HOME------*/
+
+/* presentation text*/
+.home_text{
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-bottom: 30px;
+}
+.home_title{	
+	text-align: center;
+}
+.home_title h1{
+	font-weight: 600;
+	color:rgb(61, 179, 158);
+}
+.home_title p{
+	font-size: 18px;
+}
+
+/*thumbnail*/
+.home_container .thumbnail{
+	text-align: center;
+}
+.home_container .thumbnail h4{
+	text-align: center;
+	font-weight: 500;
+}
+.thumbnail a>img, .thumbnail>img{
+	margin-top: 10px;
+}
+
+/* text*/
+.home_feature{
+	text-align: justify;
+	margin-bottom: 30px;
+}
+.home_feature h2{
+	font-weight: 500;
+	color: rgb(61, 179, 158);
+}
+
+/*highlight*/
+.home_highlight{
+	text-align: justify;
+	background-color: rgb(61, 179, 158);
+	color: white;
+	font-weight: 300;
+	padding:60px 160px 60px 160px;
+	width: 100%;
+	margin: 0;
+}
+.home_highlight h2{
+	font-weight: 500;
+	color: white;
+}
+
+
+
+
+/*--------MAP------*/
+
+
+/*--------DASHBOARD------*/
+ul.nav.nav-tabs{
+	margin-top: 15px;
+}
+
+/****************************************************************
+--------------------------------RESPONSIVE------*/
+/****************************************************************/
+@media (max-width:767px){
+	.home_highlight{
+		padding: 30px 35px 30px 35px;
+	}
+}
+
+@media (min-width: 768px){
+	/*** NAVBAR ***/
+	.navbar-nav {
+		float:right;
+	}
+	
+	.home_container{
+		padding-right:100px;
+		padding-left: 100px;
+	}
+
+}
