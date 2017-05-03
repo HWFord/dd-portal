@@ -9,10 +9,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bare - Start Bootstrap Template</title>
+    <title>Index DD</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/theme.min.css" rel="stylesheet">
+    <link href="css/portal_index.css" rel="stylesheet">
+    <link href="css/sticky-footer.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -34,7 +36,7 @@
 <body style="height:100%;">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -44,19 +46,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">L'index du développement durable</a>
+                <a class="navbar-brand" href="index.html"> 
+                    <img src="img/eye.svg" style="width:20px;">
+                    <span>L'index du <span style="font-weight:600;">développement durable</span></span>
+                </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="map.html#">Map</a>
+                        <a href="index.html">Accueil</a>                    
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="map.html">Portail cartographique</a>                     
                     </li>
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="dashboard.html">Tableau de bord</a>
+                    </li>
+                    <li>
+                        <a href="#">Documentation</a>
                     </li>
                 </ul>
             </div>
@@ -67,7 +75,7 @@
 
     <!-- Page Content -->
          <div class="map" style="height:100%;">
-			<iframe src="http://kartenn.region-bretagne.fr/territoires/# scrolling="no" frameborder="0" style="height: 100%; width: 100%""></iframe>
+			<iframe src="http://kartenn.region-bretagne.fr/territoires/#" scrolling="no" frameborder="0" style="height: 100%; width: 100%""></iframe>
 		</div>
     <!-- /.container -->
 
