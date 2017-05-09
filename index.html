@@ -15,6 +15,9 @@
     <link href="css/theme.min.css" rel="stylesheet">
     <link href="css/portal_index.css" rel="stylesheet">
     <link href="css/sticky-footer.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/toucheffects.js"></script>
+	<script src="js/modernizr.custom.js"></script>
 
     <!-- Custom CSS -->
     <style>
@@ -72,15 +75,17 @@
         </div>
         <!-- /.container -->
     </nav>
+    <!-- /.Navigation -->
 
     <!-- Page Content -->
     <div class="container home_container">
     	<div class="row home_text home_title">
-    		<h1>L'index du développement durable</h1>
+    		<img src="img/logo_index_h.svg" style="width:50%;margin:30px;" />
+    		<!--<h1>L'index du développement durable</h1>-->
     		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
     	</div>
     	<!-- /.row -->
-    	<!-- /thumbnail -->
+    	<!-- /thumbnail 
         <div class="row">
 		  <div class="col-sm-6 col-md-6">
 		    <div class="thumbnail">
@@ -103,7 +108,30 @@
 		    </div>
 		  </div>
 		</div>
-        <!-- /.thumbnail -->
+        /.thumbnail -->
+        <ul class="grid cs-style-3">
+				<li>
+					<figure>
+						<img src="img/map_link3.png" alt="img04">
+						<figcaption>
+							<h3>Portail cartographique</h3>
+							<span>Cartographie des indicateurs </br> synthétiques</span>
+							<a href="http://172.16.10.39/dd-portal/map.html">Accéder</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="img/dataviz_link.png" alt="img01">
+						<figcaption>
+							<h3>Tableau de bord</h3>
+							<span>Graphiques et chiffres clés </span>
+							<a href="http://172.16.10.39/dd-portal/dashboard.html">Accéder</a>
+						</figcaption>
+					</figure>
+				</li>
+		</ul>
+
          <!-- /row -->
          <div class="row home_text home_feature ">
     		<h2>Les indices</h2>
@@ -123,7 +151,8 @@
     		<h2>Une méthode</h2>
     		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
     	</div>
-    </div>	
+    </div>
+    <a href="#" title="Haut de page" class="scrollup"><i class="glyphicon glyphicon-chevron-up"></i></a>	
     <!-- footer -->
     <footer class="footer">
       <div class="container">
@@ -153,7 +182,36 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
 </body>
+
+<!-- Scroll to top -->
+    <script>
+    ScrollToTop=function() {
+	  var s = $(window).scrollTop();
+	  if (s > 100) {
+	    $('.scrollup').fadeIn();
+	  } else {
+	    $('.scrollup').fadeOut();
+	  }
+	 
+	  $('.scrollup').click(function () {
+	      $("html, body").animate({ scrollTop: 0 }, 500);
+	      return false;
+	  });
+	}
+	 
+	StopAnimation=function() {
+	  $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
+	    $('html, body').stop();
+	  });
+	}
+	 
+	 
+	$(window).scroll(function() {
+	  ScrollToTop();
+	  StopAnimation();
+	});
+    	
+    </script>
 
 </html>

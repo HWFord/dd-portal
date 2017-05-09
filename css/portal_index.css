@@ -26,8 +26,7 @@ a.navbar-brand{
 /* presentation text*/
 .home_text{
 	padding-right: 15px;
-	padding-left: 15px;
-	margin-bottom: 30px;
+	padding-left: 15px;	
 }
 .home_title{	
 	text-align: center;
@@ -65,16 +64,13 @@ a.navbar-brand{
 /*highlight*/
 .home_highlight{
 	text-align: justify;
-	background-color: rgb(61, 179, 158);
-	color: white;
-	font-weight: 300;
-	padding:60px 160px 60px 160px;
+	background-color: rgb(237, 237, 237);
+	padding:60px 148px 60px 148px;
 	width: 100%;
 	margin: 0;
 }
 .home_highlight h2{
 	font-weight: 500;
-	color: white;
 }
 
 
@@ -86,6 +82,41 @@ a.navbar-brand{
 /*--------DASHBOARD------*/
 ul.nav.nav-tabs{
 	margin-top: 15px;
+}
+
+div#localisation_select_title{
+	margin: 15px 0px 15px 0px;
+    background-color: #3db39e;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+}
+
+#localisation_select_title h4{
+	color: white;
+	font-weight: 600;
+}
+/*--------BUTTON ScrollToTop------*/
+.scrollup {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	display: none;
+	color: white;
+	background-color: #2d4059;
+	border: 1px solid #2d4059;
+	border-radius:40px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 50px;
+	z-index: 2;
+}
+ 
+.scrollup:hover {
+	color: white;
+	background-color: #1c2837;
+	border-color: #1c2837;
 }
 
 /****************************************************************
