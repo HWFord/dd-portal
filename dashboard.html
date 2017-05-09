@@ -75,7 +75,7 @@
 
     <!-- Page Content -->
     <div class="container">
-
+        <div id="selected_feature"></div>
         <!-- Nav-tabs -->
         <ul class="nav nav-tabs nav-justified">
           <li role="presentation" class="active"><a href="h_economie" role="tab" data-toggle="tab">Dimension économique</a></li>
@@ -90,13 +90,13 @@
             <div role="tabpanel" class="tab-pane active" id="h_economie">
                  <div id="select_localisation">
                     <h3><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Sélectionner une intercommunalité ...</h3>   
-                    <select class="form-control" id="lst_geo" onchange="change_codegeo(this.value);">
+                    <select class="form-control" id="lst_geo" onchange="change_codegeo(this);">
                                 <option label="Lorient Agglomération" value="200065928">Lorient Agglomération</option>
                                 <option label="Lannion Trégor Communauté" value="200042174">Lannion Trégor Communauté</option>
                                 <option label="Lamballe Terre et Mer" value="200069391">Lamballe Terre et Mer</option>
                                 <option label="Vitré Communauté" value="200039022">Vitré Communauté</option>                     
                     </select>
-                    <div id="charts-container" class="row">
+                    <div id="charts-container_economie" class="row">
                         <div class="col-md-6">
                             <canvas id="chart_0"></canvas>
                         </div>
@@ -150,123 +150,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script>
-            //Création d'un objet référençant tous les graphiques liés à l'économie
-            var charts_eco = {};
-            //Création d'un premier graphique
-            var ctx_0 = document.getElementById("chart_0");
-			var chart_0 = new Chart(ctx_0, {
-			type: 'doughnut',
-			data: {
-			labels: [],
-			datasets: [{
-							label: 'Nombre d habitant.e.s',
-							data: [],
-							backgroundColor: [
-								"rgba(45,171,173,0.9)",
-								"rgba(72,53,95,0.9)"
-							],
-							hoverBackgroundColor: [
-								"rgba(45,171,173,1)",
-								"rgba(72,53,95,1)"	
-							],
-							borderWidth: 3
-						}]
-					},	
-			options:{
-				legend:{
-					display: true, 
-					labels:{
-						fontFamily:'Open Sans',
-						fontSize:11,
-						boxWidth:15,
-						padding:5,
-					}
-				},
-				tooltips: {
-					titleFontFamily:"roboto_bold",
-		        	titleFontSize:13,
-		        	bodyFontFamily:"roboto_regular",
-		        	backgroundColor:"rgba(36, 36, 36, 0.85)",
-		            callbacks: {
-		                label: function(tooltipItem, data) {
-		                    return parseInt(data.datasets[0].data[tooltipItem.index]).toLocaleString() + " habitant.e.s";
-		                }
-		            }
-		        }
-			}			
-			});
-           //Intégration du graphique chart_0 dans l'objet charts_eco
-           charts_eco["chart_0"] = chart_0;
-           
-           
-           
-           //Chart 2
-           
-           var ctx_1 = document.getElementById("chart_1");
-           var chart_1 = new Chart(ctx_1, {
-                type: 'bar',
-                data: {
-                    labels: [],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255,99,132,1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero:true
-                            }
-                        }]
-                    }
-                }
-            });
-            
-            charts_eco["chart_1"] = chart_1;
-            
-         /*******************************************************************************/
-         var change_codegeo = function (codegeo) {
-            //Get data
-            $.getJSON( "../ws/index_dd/data.php?code_geo=" + codegeo, function( data ) {
-                    console.log(data);
-                   //Boucle sur les graphiques présents dans charts_eco
-                   $.each(charts_eco, function (name, chart) {
-                        //Boucle sur tous les datasets de chaque graphique de charts_eco
-                        for (var i=0;i< chart.data.datasets.length;i++) {
-                            if (data[name] && data[name].data && data[name].data.datasets) {
-                                chart.data.datasets[i].data = data[name].data.datasets[i];
-                            } else {
-                                alert("Configuration manquante ou erronée dans le script php pour " + name );
-                            }
-                        }
-                        if (data[name] && data[name].labels) {
-                            chart.data.labels = data[name].labels;
-                        }
-                        chart.update();
-                        
-                   });
-            });
-        };
-    </script>
+    <script src="js/dataviz.js">   </script>       
+    
 </body>
 
 </html>
