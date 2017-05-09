@@ -76,36 +76,39 @@
     <!-- Page Content -->
     <div class="container">
         <div id="selected_feature"></div>
+        
+        <div id="select_localisation">
+            <h3><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Sélectionner une intercommunalité ...</h3>   
+            <select class="form-control" id="lst_geo" onchange="change_codegeo(this);">
+                        <option label="Lorient Agglomération" value="200065928">Lorient Agglomération</option>
+                        <option label="Lannion Trégor Communauté" value="200042174">Lannion Trégor Communauté</option>
+                        <option label="Lamballe Terre et Mer" value="200069391">Lamballe Terre et Mer</option>
+                        <option label="Vitré Communauté" value="200039022">Vitré Communauté</option>                     
+            </select>                    
+         </div>
         <!-- Nav-tabs -->
         <ul class="nav nav-tabs nav-justified">
-          <li role="presentation" class="active"><a href="h_economie" role="tab" data-toggle="tab">Dimension économique</a></li>
-          <li role="presentation"><a href="h_sociale" role="tab" data-toggle="tab">Dimension sociale</a></li>
-          <li role="presentation"><a href="h_environnement" role="tab" data-toggle="tab">Dimension environnementale</a></li>
-          <li role="presentation"><a href="h_démocratie" role="tab" data-toggle="tab">Dimension démocratique</a></li>
+          <li role="presentation" class="active"><a href="#h_economie" role="tab" data-toggle="tab">Dimension économique</a></li>
+          <li role="presentation"><a href="#h_sociale" role="tab" data-toggle="tab">Dimension sociale</a></li>
+          <li role="presentation"><a href="#h_environnement" role="tab" data-toggle="tab">Dimension environnementale</a></li>
+          <li role="presentation"><a href="#h_démocratie" role="tab" data-toggle="tab">Dimension démocratique</a></li>
         </ul>
         <!-- /Nav-tabs -->
-
+        
         <!-- Tab pane -->
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="h_economie">
-                 <div id="select_localisation">
-                    <h3><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Sélectionner une intercommunalité ...</h3>   
-                    <select class="form-control" id="lst_geo" onchange="change_codegeo(this);">
-                                <option label="Lorient Agglomération" value="200065928">Lorient Agglomération</option>
-                                <option label="Lannion Trégor Communauté" value="200042174">Lannion Trégor Communauté</option>
-                                <option label="Lamballe Terre et Mer" value="200069391">Lamballe Terre et Mer</option>
-                                <option label="Vitré Communauté" value="200039022">Vitré Communauté</option>                     
-                    </select>
-                    <div id="charts-container_economie" class="row">
+                 
+                 <div id="charts-container_economie" class="row">
                         <div class="col-md-6">
                             <canvas id="chart_0"></canvas>
                         </div>
                         <div class="col-md-6">
                             <canvas id="chart_1"></canvas>
                         </div>
-                    </div>
+                 </div>
                     
-                 </div>  
+                 
             </div>  
             <div role="tabpanel" class="tab-pane" id="h_sociale">       
             </div>  
