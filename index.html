@@ -50,7 +50,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html"> 
-                	<img src="img/eye.svg" style="width:20px;">
+                	<img src="img/logo_index_bis.svg" style="width:36px;">
                 	<span>L'index du <span style="font-weight:600;">développement durable</span></span>
                 </a>
             </div>
@@ -80,7 +80,7 @@
     <!-- Page Content -->
     <div class="container home_container">
     	<div class="row home_text home_title">
-    		<img src="img/logo_index_h.svg" style="width:50%;margin:30px;" />
+    		<img src="img/logo_index_h.svg" class="logo_index"  />
     		<!--<h1>L'index du développement durable</h1>-->
     		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
     	</div>
@@ -139,11 +139,13 @@
     	</div>
 
     </div>
-    <!-- /.container -->
+    <!-- /.container -->    
     <div class="row home_text home_highlight">
+        <div class="container home_container">    
     		<h2>Un partenariat breton </h2>
     		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     		<p><a class="btn btn-primary btn-sm" href="#" role="button">En savoir plus</a></p>
+        </div>    
     </div>
 
     <div class="container home_container">
@@ -161,15 +163,15 @@
       	</div>
       	<div class="col-sm-12 col-md-6">
       		<ul class="nav navbar-nav">
-      				<li>
-                    	<a href="">Contacts</a>                    
-                    </li>
-                    <li>
-                     	<a href="">Crédits</a>                     
-                    </li>
-                    <li>
-                        <a href="#">Conditions d'utilisations</a>
-                    </li>
+  				<li>
+                	<a href="">Contacts</a>                    
+                </li>
+                <li>
+                 	<a href="">Crédits</a>                     
+                </li>
+                <li>
+                    <a href="#">Conditions d'utilisations</a>
+                </li>
             </ul>        
       	</div>
         
@@ -177,41 +179,43 @@
       </div>
     </footer>
     <!-- /.footer -->
+
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
 </body>
 
-<!-- Scroll to top -->
+    <!-- Scroll to top -->
     <script>
-    ScrollToTop=function() {
-	  var s = $(window).scrollTop();
-	  if (s > 100) {
-	    $('.scrollup').fadeIn();
-	  } else {
-	    $('.scrollup').fadeOut();
-	  }
-	 
-	  $('.scrollup').click(function () {
-	      $("html, body").animate({ scrollTop: 0 }, 500);
-	      return false;
-	  });
-	}
-	 
-	StopAnimation=function() {
-	  $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
-	    $('html, body').stop();
-	  });
-	}
-	 
-	 
-	$(window).scroll(function() {
-	  ScrollToTop();
-	  StopAnimation();
-	});
-    	
+        ScrollToTop=function() {
+    	  var s = $(window).scrollTop();
+    	  if (s > 100) {
+    	    $('.scrollup').fadeIn();
+    	  } else {
+    	    $('.scrollup').fadeOut();
+    	  }
+    	 
+    	  $('.scrollup').click(function () {
+    	      $("html, body").animate({ scrollTop: 0 }, 500);
+    	      return false;
+    	  });
+    	}
+    	 
+    	StopAnimation=function() {
+    	  $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
+    	    $('html, body').stop();
+    	  });
+    	}
+    	 
+    	 
+    	$(window).scroll(function() {
+    	  ScrollToTop();
+    	  StopAnimation();
+    	});    	
     </script>
+    <!-- /.Scroll to top -->
 
 </html>
