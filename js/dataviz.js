@@ -317,12 +317,12 @@ charts_envir["chart_env_0"] = chart_env_0;
               },
               {                  
                   label: "EPCI",
-                  backgroundColor: "rgba(241, 130, 73, 0.6)",
-                  borderColor: "rgba(241, 130, 73, 1)",
-                  pointBackgroundColor: "rgba(241, 130, 73, 1)",
-                  pointBorderColor: "rgba(241, 130, 73, 1)",
+                  backgroundColor: "rgba(236,96,95, 0.6)",
+                  borderColor: "rgba(236,96,95, 1)",
+                  pointBackgroundColor: "rgba(236,96,95, 1)",
+                  pointBorderColor: "rgba(236,96,95, 1)",
                   pointHoverBackgroundColor: "#fff",
-                  pointHoverBorderColor: "rgba(241, 130, 73, 1)",
+                  pointHoverBorderColor: "rgba(236,96,95, 1)",
                   data: []
               }]
           },

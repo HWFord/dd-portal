@@ -23,6 +23,14 @@ a.navbar-brand{
 	padding: 12.5px 15px;
 }
 
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	background-color: rgba(28, 40, 55, 0.66)!important;
+}
+
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text{
+	color: rgba(255, 255, 255, 0.58);
+}
+
 /*--------FOOTER------*/
 footer a{
 	color: #2d4059;
@@ -68,6 +76,18 @@ footer a{
 	color: rgb(61, 179, 158);
 }
 
+/* Figcaption */
+.grid figcaption h3{
+	font-size: 23px;
+	font-weight: 500;
+}
+.grid figcaption a{
+	background: #ec605f!important;
+}
+
+.grid figcaption{
+	color: #ec605f!important;
+}
 /*highlight*/
 .home_highlight{
 	text-align: justify;
@@ -84,13 +104,22 @@ footer a{
 
 
 /*--------DASHBOARD------*/
-#localisation{	
+/* Avec filtre color sur l'image
+/*#localisation{	
 	background: 
 	    linear-gradient(
 	      rgba(45, 64, 89, 0.60), 
 	      rgba(45, 64, 89, 0.60)
-	    ), 	     
+	    ), 	
 	    url("../img/map.png");
+	background-repeat:no-repeat;
+	-webkit-background-size: cover; /* pour anciens Chrome et Safari 
+  	background-size: cover; /* version standardisée 
+
+}*/
+
+#localisation{	
+	background:url("../img/map.png");
 	background-repeat:no-repeat;
 	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
   	background-size: cover; /* version standardisée */
@@ -99,7 +128,7 @@ footer a{
 
 #select_localisation h4{
 	font-weight: 500;
-	color: white;
+	/*color: white;*/
 }
 
 div#localisation_select_title{
@@ -113,6 +142,11 @@ div#localisation_select_title{
 #localisation_select_title h5{
 	color: white;
 	font-weight: 600;
+}
+
+.form-control{
+	background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid rgba(45, 64, 89, 0.84);
 }
 
 /* NAV-TABS*/
@@ -154,6 +188,31 @@ ul.nav.nav-tabs{
 	margin-top: 15px;
 }
 
+/*--------DATA------*/
+/*thumbnail*/
+.data_container .thumbnail{
+	text-align: justify;
+}
+
+.data_container .thumbnail h4{
+	/*text-align: center;*/
+	font-weight: 500;
+}
+
+.thumbnail a>img, .thumbnail>img{
+	margin-top: 10px;
+	width: 100px;
+}
+
+.info_file{
+	color: #3db39e;
+    font-weight: 600;
+    font-size: 13px;
+}
+#upload_data{
+	margin-top: 30px;
+}
+
 /*--------BUTTON ScrollToTop------*/
 .scrollup {
 	width: 50px;
@@ -177,6 +236,9 @@ ul.nav.nav-tabs{
 	background-color: #1c2837;
 	border-color: #1c2837;
 }
+
+
+
 
 /****************************************************************
 --------------------------------RESPONSIVE------*/
@@ -248,8 +310,8 @@ ul.nav.nav-tabs{
 	
 	/***** Home******/
 	.home_container{
-		padding-right:100px;
-		padding-left: 100px;
+		padding-right:70px;
+		padding-left: 70px;
 	}
 
 	.logo_index{
@@ -262,5 +324,11 @@ ul.nav.nav-tabs{
 	/***** DASHBOARD******/
 	#select_localisation{
 	padding: 2px 200px 2px 200px;
+	}
+
+	/***** DATA******/
+	.data_container{
+		padding-right:70px;
+		padding-left: 70px;
 	}
 }

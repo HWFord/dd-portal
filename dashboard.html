@@ -9,7 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Index DD</title>
+    <title>L'index du développent durable breton</title>
+
+    <!-- Icon web page -->
+    <link rel="icon" type="image/ong" href="img/logo_index_pageweb.png" />
+    
     <!-- Chartjs librairie -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js"></script>
     <!-- Bootstrap Core CSS -->
@@ -64,11 +68,11 @@
                     <li>
                         <a href="map.html">Portail cartographique</a>                     
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="dashboard.html">Tableau de bord</a>
                     </li>
                     <li>
-                        <a href="#">Documentation</a>
+                        <a href="data.html">Données</a>
                     </li>
                 </ul>
             </div>
@@ -100,8 +104,8 @@
     <div class="container">
         <!-- Nav-tabs -->
         <ul class="nav nav-tabs nav-justified">
-          <li role="presentation" class="active"><a href="#h_economie" role="tab" data-toggle="tab">Dimension économique</a></li>
-          <li role="presentation"><a href="#h_sociale" role="tab" data-toggle="tab">Dimension sociale</a></li>
+          <li role="presentation"class="active"><a href="#h_sociale" role="tab" data-toggle="tab">Dimension sociale</a></li>
+          <li role="presentation"><a href="#h_economie" role="tab" data-toggle="tab">Dimension économique</a></li>          
           <li role="presentation"><a href="#h_environnement" role="tab" data-toggle="tab">Dimension environnementale</a></li>
           <li role="presentation"><a href="#h_démocratie" role="tab" data-toggle="tab">Dimension démocratique</a></li>
         </ul>
@@ -109,8 +113,36 @@
         
         <!-- Tab pane -->
         <div class="tab-content">
+        	<!-- TabPanel-Social -->
+            <div role="tabpanel" class="tab-pane active" id="h_sociale">       
+                <div id="charts-container_social">
+                	<!-- ROW A -->
+                 	<div class="row">
+	                    <div class="col-md-5">
+	                        <div class="panel panel-default">
+	                            <div class="panel-body panel-graph">
+	                                <h4>RÉPARTITION DES INDICATEURS SYNTHÉTIQUES</h4>
+	                                <canvas id="chart_soc_0"></canvas>
+	                                <p class="sub-title-graph"><b>Graphique 1:</b> Radar - Répartition des indices des sous-dimensions</p>
+	                            </div>
+	                        </div>
+	                    </div>          
+	                    <div class="col-md-7">
+	                        <div class="panel panel-default">
+	                            <div class="panel-body panel-text">
+	                                <img src="img/dim_social.svg">
+	                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>                              
+	                            </div>
+	                        </div>
+	                    </div> 
+                 	</div>
+                 	<!-- /.ROW A -->	     
+                </div>
+            </div>  
+            <!-- /.TabPanel-Social -->
+
         	<!-- TabPanel-Economie -->
-            <div role="tabpanel" class="tab-pane active" id="h_economie">             
+            <div role="tabpanel" class="tab-pane" id="h_economie">             
                 <div id="charts-container_economie">
                 	<!-- ROW A -->
                   	<div class="row">
@@ -157,35 +189,7 @@
 	                <!-- /.ROW B -->      
                 </div>   
             </div>
-            <!-- /.TabPanel-Economie -->
-
-            <!-- TabPanel-Social -->
-            <div role="tabpanel" class="tab-pane" id="h_sociale">       
-                <div id="charts-container_social">
-                	<!-- ROW A -->
-                 	<div class="row">
-	                    <div class="col-md-5">
-	                        <div class="panel panel-default">
-	                            <div class="panel-body panel-graph">
-	                                <h4>RÉPARTITION DES INDICATEURS SYNTHÉTIQUES</h4>
-	                                <canvas id="chart_soc_0"></canvas>
-	                                <p class="sub-title-graph"><b>Graphique 1:</b> Radar - Répartition des indices des sous-dimensions</p>
-	                            </div>
-	                        </div>
-	                    </div>          
-	                    <div class="col-md-7">
-	                        <div class="panel panel-default">
-	                            <div class="panel-body panel-text">
-	                                <img src="img/dim_social.svg">
-	                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>                              
-	                            </div>
-	                        </div>
-	                    </div> 
-                 	</div>
-                 	<!-- /.ROW A -->	     
-                </div>
-            </div>  
-            <!-- /.TabPanel-Social -->
+            <!-- /.TabPanel-Economie -->            
             
             <!-- TabPanel-Environnement -->
             <div role="tabpanel" class="tab-pane" id="h_environnement">             
