@@ -166,6 +166,13 @@ ul.nav.nav-tabs{
 	margin-top: 20px;
 }
 
+/* TEXT*/
+.titleSubDim{
+	font-weight: 500!important;
+	margin-top: 15px!important;
+	text-transform: uppercase;
+}
+
 /* PANEL */
 .panel-text{
 	padding: 20px;

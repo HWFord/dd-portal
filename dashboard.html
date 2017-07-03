@@ -16,20 +16,20 @@
     
     <!-- Chartjs librairie -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js"></script>
-    <!-- Bootstrap Core CSS -->
-    <link href="css/theme.min.css" rel="stylesheet">
-    <!-- Css index du développement durable -->
-    <link href="css/portal_index.css" rel="stylesheet">
-    <!-- Css footer -->
-    <link href="css/sticky-footer.css" rel="stylesheet">
-
     <!-- Custom CSS -->
-    <style>
+    <link href="css/theme.min.css" rel="stylesheet">
+    <link href="css/portal_index.css" rel="stylesheet">
+    <link href="css/sticky-footer.css" rel="stylesheet">
+    <link href="css/bootstrap-adaptive-tabs.css" rel="stylesheet">
+
+
+    
+<style>
     body {
         padding-top: 60px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
-    </style>
+</style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +41,6 @@
 </head>
 
 <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     	<!-- Container -->
@@ -116,7 +115,7 @@
         	<!-- TabPanel-Social -->
             <div role="tabpanel" class="tab-pane active" id="h_sociale">       
                 <div id="charts-container_social">
-                	<!-- ROW A -->
+                	<!-- ROW A Global-->
                  	<div class="row">
 	                    <div class="col-md-5">
 	                        <div class="panel panel-default">
@@ -136,7 +135,36 @@
 	                        </div>
 	                    </div> 
                  	</div>
-                 	<!-- /.ROW A -->	     
+                 	<!-- /.ROW A -->
+                    <h4 class="titleSubDim">Éducation et formation</h4>	
+                    <!-- ROW B Education & Formation-->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-graph">
+                                    <canvas id="chart_soc_1" width="100" height="70"></canvas>
+                                    <p class="sub-title-graph"><b>Graphique 2:</b> Donught - Part de la population de 15-50 ans (non scolarisée) sans aucun dipôme</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+                                </div>
+                            </div>
+                        </div>          
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-text">
+                                    <canvas id="chart_soc_2" width="" height="111"></canvas>
+                                    <p style="font-size:11px; line-height:1.4;">A: Aucun diplôme ou au plus BEPC, B: Certificats d'aptitudes professionnelles - Brevet d'études professionnelles, C: Baccalauréat (général - technologique - professionnel), D: Diplôme de l'enseignement supérieur</p>
+                                    <p class="sub-title-graph"><b>Graphique 3:</b> Bar - Répartition de la population selon le niveau de formation (en %)</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-2">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-graph">
+                                    
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <!-- /.ROW B -->
                 </div>
             </div>  
             <!-- /.TabPanel-Social -->
@@ -165,28 +193,34 @@
 	                    </div> 
 	                </div>
 	                <!-- /.ROW A -->
-	                <!-- ROW B -->
-	                <div class="row">         	
-	                    <div class="col-md-6">
-	                		<div class="panel panel-default">
-	                			<div class="panel-body panel-graph">
-	                				<h4>SOUS-DIMENSION 1</h4>
-	                        		<canvas id="chart_eco_1"></canvas>
-	                        		<p class="sub-title-graph"><b>Graphique 2:</b> Donught - Indicateur 1</p>
-	                        	</div>
-	                        </div>
-	                    </div>
-	                    <div class="col-md-6">
-	                		<div class="panel panel-default">
-	                			<div class="panel-body panel-graph">
-	                				<h4>SOUS-DIMENSION 2</h4>
-	                        		<canvas id="chart_eco_2"></canvas>
-	                        		<p class="sub-title-graph"><b>Graphique 3:</b> Bar - Indicateur 2</p>
-	                        	</div>
-	                        </div>
-	                    </div>
-	                </div>
-	                <!-- /.ROW B -->      
+	                 <h4 class="titleSubDim">Accès à l'emploi</h4>	
+                    <!-- ROW B Accès à l'emploi-->
+                    <div class="row">                                  
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-text">
+                                    <canvas id="chart_soc_1" width="" height="111"></canvas>                            
+                                    <p class="sub-title-graph"><b>Graphique 2:</b> Ligne - Répartition de la population selon le niveau de formation (en %)</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-2">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-graph">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-graph">
+                                    <canvas id="chart_eco_2" width="100" height="70"></canvas>
+                                    <p class="sub-title-graph"><b>Graphique 3:</b> Donught - Part de la population de 15-50 ans (non scolarisée) sans aucun dipôme</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <!-- /.ROW B -->      
                 </div>   
             </div>
             <!-- /.TabPanel-Economie -->            

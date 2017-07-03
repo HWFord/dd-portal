@@ -170,76 +170,13 @@ var ctx_eco_0 = document.getElementById("chart_eco_0");
       });
 
 //Intégration du graphique chart_0 dans l'objet charts_eco
-           charts_eco["chart_eco_0"] = chart_eco_0;
+charts_eco["chart_eco_0"] = chart_eco_0;
 
-// CHART 1 - Donught
-          
-          var ctx_eco_1 = document.getElementById("chart_eco_1");
-    			var chart_eco_1 = new Chart(ctx_eco_1, {
-    			type: 'doughnut',
-    			data: {
-    			labels: [],
-    			datasets: [{
-    							label: 'Nombre d habitant.e.s',
-    							data: [],
-    							backgroundColor: [
-    								"rgba(255,212,96,0.9)",
-    								"rgba(153,153,153,0.9)"
-    							],
-    							hoverBackgroundColor: [
-    								"rgba(255,212,96,1)",
-    								"rgba(153,153,153,1)"	
-    							],
-    							borderWidth: 3
-    						}]
-    					}    					
-    			});
-           
-//Intégration du graphique chart_1 dans l'objet charts_eco
-  charts_eco["chart_eco_1"] = chart_eco_1;
-           
-              
-//Chart 2 - Bar         
-           var ctx_eco_2 = document.getElementById("chart_eco_2");
-           var chart_eco_2 = new Chart(ctx_eco_2, {
-                type: 'bar',
-                data: {
-                    labels: [],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [],
-                        backgroundColor: [
-                            'rgba(255,212,96, 0.9)',
-                            'rgba(255,212,96, 0.9)',
-                            'rgba(255,212,96, 0.9)',
-                            'rgba(255,212,96, 0.9)',
-                            'rgba(255,212,96, 0.9)',
-                            'rgba(255,212,96, 0.9)'
-                        ],
-                        borderColor: [
-                            'rgba(255,212,96,1)',
-                            'rgba(255,212,96, 1)',
-                            'rgba(255,212,96, 1)',
-                            'rgba(255,212,96, 1)',
-                            'rgba(255,212,96, 1)',
-                            'rgba(255,212,96, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero:true
-                            }
-                        }]
-                    }
-                }
-            });
-  
-//Intégration du graphique chart_2 dans l'objet charts_eco            
-  charts_eco["chart_eco_2"] = chart_eco_2;
+// CHART 1 - Line -> Evolution des DEFM
+
+
+
+
             
          
 
@@ -387,4 +324,84 @@ charts_envir["chart_env_0"] = chart_env_0;
 
 
 //Intégration du graphique chart_0 dans l'objet charts_soc
-    charts_soc["chart_soc_0"] = chart_soc_0;
+  charts_soc["chart_soc_0"] = chart_soc_0;
+
+// CHART 1 - Donught - Part des 15-50ans non scolarisé sans diplôme
+          
+      var ctx_soc_1 = document.getElementById("chart_soc_1");
+      var chart_soc_1 = new Chart(ctx_soc_1, {
+        type: 'doughnut',
+        data: {
+          labels: [],
+          datasets: [{
+                  label: 'Population de 15-50 ans (non scolarisée)',
+                  data: [],
+                  backgroundColor: [
+                    "rgba(61,179,158,0.9)",
+                    "rgba(153,153,153,0.9)"
+                  ],
+                  hoverBackgroundColor: [
+                    "rgba(61,179,158,1)",
+                    "rgba(153,153,153,1)" 
+                  ],
+                  borderWidth: 3
+                }]
+        },
+        options: {
+          tooltips: {
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    return parseInt(data.datasets[0].data[tooltipItem.index]).toLocaleString() + " %";
+                }
+            }
+          }
+        }             
+      });
+           
+//Intégration du graphique chart_1 dans l'objet charts_soc
+  charts_soc["chart_soc_1"] = chart_soc_1;
+
+
+// CHART 2 - Bar - Niveau de formation
+     var ctx_soc_2 = document.getElementById("chart_soc_2");
+     var chart_soc_2 = new Chart(ctx_soc_2, {
+          type: 'bar',
+          data: {
+              labels: [],
+              datasets: [{
+                  label: 'EPCI',
+                  data: [],
+                  backgroundColor: [
+                      'rgba(61,179,158,0.9)',
+                      'rgba(61,179,158,0.9)',
+                      'rgba(61,179,158,0.9)',
+                      'rgba(61,179,158,0.9)'
+                  ],
+                  borderColor: [
+                      'rgba(61,179,158,1)',
+                      'rgba(61,179,158,1)',
+                      'rgba(61,179,158,1)',
+                      'rgba(61,179,158,1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true
+                      }
+                  }]
+              },
+              tooltips: {
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          return parseFloat(tooltipItem.yLabel.toFixed(1)).toLocaleString() + " %";
+                      }
+                  }
+              }
+          }
+      });
+//Intégration du graphique chart_2 dans l'objet charts_soc
+  charts_soc["chart_soc_2"] = chart_soc_2;
