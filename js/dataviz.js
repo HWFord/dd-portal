@@ -36,6 +36,7 @@
         });
 
     var change_codegeo = function (codegeo, labelgeo) {
+      $("#transparent").hide()
             $.getJSON( "../ws/index_dd/data_eco.php?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les graphiques présents dans charts_eco
@@ -54,8 +55,16 @@
                         chart.update();
                         
                    });
+                   $("#transparent").show();
                    
             }); 
+            $.getJSON( "../ws/index_dd/data_eco_figures.php?code_geo=" + codegeo, function( data ) {
+                    console.log(data);
+                   //Boucle sur les figures-soc présentes dans dashboard.html
+                   $(".figure-eco").each( function (id, element) {
+                        $(element).text(data[element.id]);
+                   });
+            });
             $.getJSON( "../ws/index_dd/data_env.php?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les graphiques présents dans charts_eco
@@ -74,6 +83,7 @@
                         chart.update();
                         
                    });
+                   $("#transparent").show();
                    
             }); 
             $.getJSON( "../ws/index_dd/data_demo.php?code_geo=" + codegeo, function( data ) {
@@ -94,6 +104,7 @@
                         chart.update();
                         
                    });
+                   $("#transparent").show();
                    
             });
             $.getJSON( "../ws/index_dd/data_soc.php?code_geo=" + codegeo, function( data ) {
@@ -114,7 +125,15 @@
                         chart.update();
                         
                    });
+                   $("#transparent").show();
                    
+            });
+             $.getJSON( "../ws/index_dd/data_soc_figures.php?code_geo=" + codegeo, function( data ) {
+                    console.log(data);
+                   //Boucle sur les figures-soc présentes dans dashboard.html
+                   $(".figure-soc").each( function (id, element) {
+                        $(element).text(data[element.id]);
+                   });
             });
             $("#selected_feature").text(labelgeo);           
         };
@@ -172,13 +191,88 @@ var ctx_eco_0 = document.getElementById("chart_eco_0");
 //Intégration du graphique chart_0 dans l'objet charts_eco
 charts_eco["chart_eco_0"] = chart_eco_0;
 
-// CHART 1 - Line -> Evolution des DEFM
 
 
+// CHART 2 - Doughnut - Part des salriées en CDI
+          
+      var ctx_eco_2 = document.getElementById("chart_eco_2");
+      var chart_eco_2 = new Chart(ctx_eco_2, {
+        type: 'doughnut',
+        data: {
+          labels: [],
+          datasets: [{
+                  label: 'Part des salarié.e.s',
+                  data: [],
+                  backgroundColor: [
+                    "rgba(255, 212, 96,0.9)",
+                    "rgba(153,153,153,0.9)"
+                  ],
+                  hoverBackgroundColor: [
+                    "rgba(255, 212, 96,1)",
+                    "rgba(153,153,153,1)" 
+                  ],
+                  borderWidth: 3
+                }]
+        },
+        options: {
+          tooltips: {
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    return parseInt(data.datasets[0].data[tooltipItem.index]).toLocaleString() + " %";
+                }
+            }
+          }
+        }             
+      });
 
-
+//Intégration du graphique chart_2 dans l'objet charts_eco
+charts_eco["chart_eco_2"] = chart_eco_2;
             
-         
+// CHART 1 - Line -> Evolution des DEFM
+    var ctx_eco_1 = document.getElementById("chart_eco_1");
+    var chart_eco_1 = new Chart(ctx_eco_1, {
+          type: 'line',
+          data: {
+              labels: [],
+              datasets: [{
+                  label: 'Chercheur.euse.s d\'emploi de cat.ABC' ,
+                  data: [],
+                  fill: false,
+                  backgroundColor: "rgba(255, 212, 96,0.4)",
+                  borderColor: "rgba(255, 212, 96,1)",
+                  borderDashOffset: 0.5,
+                  pointBorderColor: "rgba(255, 212, 96,1)",
+                  pointBackgroundColor: "rgba(255,255,255,1)",
+                  pointBorderWidth: 7,
+                  pointHoverRadius: 5,
+                  pointHoverBackgroundColor: "rgba(255,255,255,1)",
+                  pointHoverBorderColor: "rgba(255, 212, 96,1)",
+                  pointHoverBorderWidth: 2,
+                  pointRadius: 2,
+                  pointHitRadius: 1,
+              }]
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true
+                      }
+                  }]
+              },
+              tooltips: {
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          return parseFloat(tooltipItem.yLabel.toFixed(1)).toLocaleString() + " chercheur.euse.s";
+                      }
+                  }
+              }
+          }
+    });
+
+//Intégration du graphique chart_0 dans l'objet charts_eco
+charts_eco["chart_eco_1"] = chart_eco_1;
+
 
 /************* ENVIRONNEMENT ****************/   
 

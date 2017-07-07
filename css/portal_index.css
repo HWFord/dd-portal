@@ -136,7 +136,8 @@ div#localisation_select_title{
     background-color: #3db39e;
     padding: 1px 0px 1px 0px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: uppercase;    
+	letter-spacing: 3px;
 }
 
 #localisation_select_title h5{
@@ -168,7 +169,7 @@ ul.nav.nav-tabs{
 
 /* TEXT*/
 .titleSubDim{
-	font-weight: 500!important;
+	font-weight: 700!important;
 	margin-top: 15px!important;
 	text-transform: uppercase;
 }
@@ -195,6 +196,29 @@ ul.nav.nav-tabs{
 	margin-top: 15px;
 }
 
+/* DIMENSION SOCIAL*/
+.numberSocial{
+    color: #3db39e;
+}
+.numberEco{
+    color: #ffd460;
+}
+.number{
+	font-size: 40px;
+    font-weight: 900;
+}
+.title-number{
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1;
+}
+.sub-number{
+	font-size: 11px;
+	color:#999!important;
+	font-weight: 500!important;
+}
+
+/*********************
 /*--------DATA------*/
 /*thumbnail*/
 .data_container .thumbnail{

@@ -100,7 +100,7 @@
 
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" id="transparent" style="display:none;">
         <!-- Nav-tabs -->
         <ul class="nav nav-tabs nav-justified">
           <li role="presentation"class="active"><a href="#h_sociale" role="tab" data-toggle="tab">Dimension sociale</a></li>
@@ -143,7 +143,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-body panel-graph">
                                     <canvas id="chart_soc_1" width="100" height="70"></canvas>
-                                    <p class="sub-title-graph"><b>Graphique 2:</b> Donught - Part de la population de 15-50 ans (non scolarisée) sans aucun dipôme</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+                                    <p class="sub-title-graph"><b>Graphique 2:</b> Doughnut - Part de la population de 15-50 ans (non scolarisée) sans aucun dipôme</br><i>Pour l'EPCI sélectionné en 2013</i></p>
                                 </div>
                             </div>
                         </div>          
@@ -157,10 +157,14 @@
                             </div>
                         </div> 
                         <div class="col-md-2">
-                            <div class="panel panel-default">
-                                <div class="panel-body panel-graph">
-                                    
-                                </div>
+                            <div class="row numberSocial"> 
+	                            <div class="panel panel-default">
+	                                <div class="panel-body panel-graph"> 
+	                                	<img src="img/social_diplome.svg" style="width:30%;">  
+	                                	<p id="figure_soc_0" class="figure-soc number" style="margin:-8px 0px -2px 0px!important;"></p>
+	                                	<p class="title-number">Indice de diplôme</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+	                                </div>
+	                            </div>
                             </div>
                         </div>  
                     </div>
@@ -196,26 +200,43 @@
 	                 <h4 class="titleSubDim">Accès à l'emploi</h4>	
                     <!-- ROW B Accès à l'emploi-->
                     <div class="row">                                  
-                        <div class="col-md-6">
+                        <div class="col-md-6" style="display:none;">
                             <div class="panel panel-default">
                                 <div class="panel-body panel-text">
-                                    <canvas id="chart_soc_1" width="" height="111"></canvas>                            
-                                    <p class="sub-title-graph"><b>Graphique 2:</b> Ligne - Répartition de la population selon le niveau de formation (en %)</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+                                    <canvas id="chart_eco_1" width="100" height="48"></canvas>                            
+                                    <p class="sub-title-graph"><b>Graphique 2:</b> Ligne - Evolution mensuelle des chercheur.euse.s d'emploi de cat. ABC</br><i>Pour l'EPCI sélectionné en 2017</i></p>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         <div class="col-md-2">
-                            <div class="panel panel-default">
-                                <div class="panel-body panel-graph">
-                                    
-                                </div>
+                            <div class="row numberEco"> 
+	                            <div class="panel panel-default">
+	                                <div class="panel-body panel-graph"> 
+	                                	<img src="img/eco_defm.svg" style="width:30%;">  
+	                                	<p style="margin:-10px 0px -5px 0px!important;">
+	                                		<span id="figure_eco_0" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
+	                                	</p>
+	                                	<p class="title-number">Évolution annuelle des chercheur.euse.s d'emploi de cat.ABC</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+	                                </div>
+	                            </div>
+                            </div>
+                            <div class="row numberEco"> 
+	                            <div class="panel panel-default">
+	                                <div class="panel-body panel-graph"> 
+	                                	<img src="img/eco_txemploi.svg" style="width:30%;">  
+	                                	<p style="margin:-10px 0px -5px 0px!important;"> 
+	                                		<span id="figure_eco_1" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
+	                                	</p>
+	                                	<p class="title-number">Taux d'emploi</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+	                                </div>
+	                            </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="panel panel-default">
                                 <div class="panel-body panel-graph">
-                                    <canvas id="chart_eco_2" width="100" height="70"></canvas>
-                                    <p class="sub-title-graph"><b>Graphique 3:</b> Donught - Part de la population de 15-50 ans (non scolarisée) sans aucun dipôme</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+                                    <canvas id="chart_eco_2" width="100" height="79"></canvas>
+                                    <p class="sub-title-graph"><b>Graphique 3:</b> Doughnut - Part des salarié.e.s en CDI</br><i>Pour l'EPCI sélectionné en 2013</i></p>
                                 </div>
                             </div>
                         </div>  
