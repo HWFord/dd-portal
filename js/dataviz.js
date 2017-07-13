@@ -193,10 +193,10 @@ charts_eco["chart_eco_0"] = chart_eco_0;
 
 
 
-// CHART 2 - Doughnut - Part des salriées en CDI
+// CHART 1 - Doughnut - Part des salriées en CDI
           
-      var ctx_eco_2 = document.getElementById("chart_eco_2");
-      var chart_eco_2 = new Chart(ctx_eco_2, {
+      var ctx_eco_1 = document.getElementById("chart_eco_1");
+      var chart_eco_1 = new Chart(ctx_eco_1, {
         type: 'doughnut',
         data: {
           labels: [],
@@ -226,30 +226,26 @@ charts_eco["chart_eco_0"] = chart_eco_0;
       });
 
 //Intégration du graphique chart_2 dans l'objet charts_eco
-charts_eco["chart_eco_2"] = chart_eco_2;
+charts_eco["chart_eco_1"] = chart_eco_1;
             
-// CHART 1 - Line -> Evolution des DEFM
-    var ctx_eco_1 = document.getElementById("chart_eco_1");
-    var chart_eco_1 = new Chart(ctx_eco_1, {
-          type: 'line',
+// CHART 2 - Bar - Evolution de l'emploi entre 2008 et 2013
+     var ctx_eco_2 = document.getElementById("chart_eco_2");
+     var chart_eco_2 = new Chart(ctx_eco_2, {
+          type: 'bar',
           data: {
               labels: [],
               datasets: [{
-                  label: 'Chercheur.euse.s d\'emploi de cat.ABC' ,
+                  label: 'EPCI',
                   data: [],
-                  fill: false,
-                  backgroundColor: "rgba(255, 212, 96,0.4)",
-                  borderColor: "rgba(255, 212, 96,1)",
-                  borderDashOffset: 0.5,
-                  pointBorderColor: "rgba(255, 212, 96,1)",
-                  pointBackgroundColor: "rgba(255,255,255,1)",
-                  pointBorderWidth: 7,
-                  pointHoverRadius: 5,
-                  pointHoverBackgroundColor: "rgba(255,255,255,1)",
-                  pointHoverBorderColor: "rgba(255, 212, 96,1)",
-                  pointHoverBorderWidth: 2,
-                  pointRadius: 2,
-                  pointHitRadius: 1,
+                  backgroundColor: [
+                      'rgba(255, 212, 96,0.9)',
+                      'rgba(255, 212, 96,0.9)'
+                  ],
+                  borderColor: [
+                      'rgba(255, 212, 96,1)',
+                      'rgba(255, 212, 96,1)'
+                  ],
+                  borderWidth: 1
               }]
           },
           options: {
@@ -263,15 +259,95 @@ charts_eco["chart_eco_2"] = chart_eco_2;
               tooltips: {
                   callbacks: {
                       label: function(tooltipItem, data) {
-                          return parseFloat(tooltipItem.yLabel.toFixed(1)).toLocaleString() + " chercheur.euse.s";
+                          return parseFloat(tooltipItem.yLabel.toFixed(0)).toLocaleString() + " emplois";
                       }
                   }
               }
           }
-    });
+      });
+//Intégration du graphique chart_2 dans l'objet charts_soc
+  charts_eco["chart_eco_2"] = chart_eco_2;
 
-//Intégration du graphique chart_0 dans l'objet charts_eco
-charts_eco["chart_eco_1"] = chart_eco_1;
+
+// // CHART 3 - Bar - Répartition des emplois selon la taille 
+//      var ctx_eco_3 = document.getElementById("chart_eco_3");
+//      var chart_eco_3 = new Chart(ctx_eco_3, {
+//           type: 'bar',
+//           data: {
+//               labels: [],
+//               datasets: [{
+//                   label: 'EPCI',
+//                   data: [],
+//                   backgroundColor: [
+//                       'rgba(255, 212, 96,0.9)',
+//                       'rgba(255, 212, 96,0.9)'
+//                   ],
+//                   borderColor: [
+//                       'rgba(255, 212, 96,1)',
+//                       'rgba(255, 212, 96,1)'
+//                   ],
+//                   borderWidth: 1
+//               }]
+//           },
+//           options: {
+//               scales: {
+//                   yAxes: [{
+//                       ticks: {
+//                           beginAtZero:true
+//                       }
+//                   }]
+//               },
+//               tooltips: {
+//                   callbacks: {
+//                       label: function(tooltipItem, data) {
+//                           return parseFloat(tooltipItem.yLabel.toFixed(0)).toLocaleString() + " %";
+//                       }
+//                   }
+//               }
+//           }
+//       });
+// //Intégration du graphique chart_2 dans l'objet charts_soc
+//   charts_eco["chart_eco_3"] = chart_eco_3;
+
+
+// CHART 4 - Doughnut - Répartition des emplois selon les secteurs
+          
+      var ctx_eco_4 = document.getElementById("chart_eco_4");
+      var chart_eco_4 = new Chart(ctx_eco_4, {
+        type: 'pie',
+        data: {
+          labels: [],
+          datasets: [{
+                  label: 'Part des emplois',
+                  data: [],
+                  backgroundColor: [
+                    "rgba(100,100,100,0.9)",                    
+                    "rgba(255,228,156,0.9)",
+                    "rgba(153,153,153,0.9)",
+                    "rgba(255, 212, 96,0.9)"
+                  ],
+                  hoverBackgroundColor: [
+                    "rgba(100,100,100,1)",                    
+                    "rgba(255,228,156,1)",
+                    "rgba(153,153,153,1)",
+                    "rgba(255, 212, 96,1)" 
+                  ],
+                  borderWidth: 3
+                }]
+        },
+        options: {
+          tooltips: {
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + " %";
+                }
+            }
+          }
+        }             
+      });  
+
+//Intégration du graphique chart_2 dans l'objet charts_soc
+  charts_eco["chart_eco_4"] = chart_eco_4;
 
 
 /************* ENVIRONNEMENT ****************/   
