@@ -1,0 +1,365 @@
+/*******************************************************************************************
+--------------------- FEUILLE DE STYLE PORTAIL DE L'INDEX DU DEVELOPPEMENT DURABLE.
+********************************************************************************************/
+
+.h1, .h2, .h3, .h4, h1, h2, h3, h4{
+	color:#2D4059;
+}
+
+/*--------NAVBAR------*/
+a.navbar-brand{
+	font-weight: 300;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+	color: #ecf0f1;
+    background-color: rgba(255, 255, 255, 0.23);
+}
+.navbar-brand>img {
+	display: inline-block;
+	width: 36px;
+}
+.navbar-brand{
+	padding: 12.5px 15px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	background-color: rgba(28, 40, 55, 0.66)!important;
+}
+
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-text{
+	color: rgba(255, 255, 255, 0.58);
+}
+
+/*--------FOOTER------*/
+footer a{
+	color: #2d4059;
+}
+
+/*--------HOME------*/
+
+/* presentation text*/
+.home_text{
+	padding-right: 15px;
+	padding-left: 15px;	
+}
+.home_title{	
+	text-align: center;
+}
+.home_title h1{
+	font-weight: 600;
+	color:rgb(61, 179, 158);
+}
+.home_title p{
+	font-size: 18px;
+}
+
+/*thumbnail*/
+.home_container .thumbnail{
+	text-align: center;
+}
+.home_container .thumbnail h4{
+	text-align: center;
+	font-weight: 500;
+}
+.thumbnail a>img, .thumbnail>img{
+	margin-top: 10px;
+}
+
+/* text*/
+.home_feature{
+	text-align: justify;
+	margin-bottom: 30px;
+}
+.home_feature h2{
+	font-weight: 500;
+	color: rgb(61, 179, 158);
+}
+
+/* Figcaption */
+.grid figcaption h3{
+	font-size: 23px;
+	font-weight: 500;
+}
+.grid figcaption a{
+	background: #ec605f!important;
+}
+
+.grid figcaption{
+	color: #ec605f!important;
+}
+/*highlight*/
+.home_highlight{
+	text-align: justify;
+	background-color: rgb(237, 237, 237);
+	width: 100%;
+	margin: 0;
+	padding: 20px 0px 30px 0px;
+}
+.home_highlight h2{
+	font-weight: 500;
+}
+
+/*--------MAP------*/
+
+
+/*--------DASHBOARD------*/
+/* Avec filtre color sur l'image
+/*#localisation{	
+	background: 
+	    linear-gradient(
+	      rgba(45, 64, 89, 0.60), 
+	      rgba(45, 64, 89, 0.60)
+	    ), 	
+	    url("../img/map.png");
+	background-repeat:no-repeat;
+	-webkit-background-size: cover; /* pour anciens Chrome et Safari 
+  	background-size: cover; /* version standardisée 
+
+}*/
+
+#localisation{	
+	background:url("../img/map.png");
+	background-repeat:no-repeat;
+	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  	background-size: cover; /* version standardisée */
+
+}
+
+#select_localisation h4{
+	font-weight: 500;
+	/*color: white;*/
+}
+
+div#localisation_select_title{
+	margin: 15px 0px 15px 0px;
+    background-color: #3db39e;
+    padding: 1px 0px 1px 0px;
+    text-align: center;
+    text-transform: uppercase;    
+	letter-spacing: 3px;
+}
+
+#localisation_select_title h5{
+	color: white;
+	font-weight: 600;
+}
+
+.form-control{
+	background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid rgba(45, 64, 89, 0.84);
+}
+
+/* NAV-TABS*/
+ul.nav.nav-tabs{
+	margin-top: 5px;
+}
+.nav-tabs a{
+	color:#b4bcc2;
+}
+.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover{
+	border-top: 3px solid #2d4059;
+    font-weight: 500;
+}
+
+/*tab-pane*/
+.tab-pane{
+	margin-top: 20px;
+}
+
+/* TEXT*/
+.titleSubDim{
+	font-weight: 700!important;
+	margin-top: 15px!important;
+	text-transform: uppercase;
+}
+
+/* PANEL */
+.panel-text{
+	padding: 20px;
+	text-align: justify;
+	text-align-last:center;
+}
+
+.panel-graph{
+	text-align: center;
+	padding: 10px;
+}
+
+.panel-graph h4{
+	font-size: 16px;
+    font-weight: 500;
+}
+
+.sub-title-graph{
+	font-size: 13px;
+	margin-top: 15px;
+}
+
+/* DIMENSION SOCIAL*/
+.numberSocial{
+    color: #3db39e;
+}
+.numberEco{
+    color: #ffd460;
+}
+.number{
+	font-size: 40px;
+    font-weight: 900;
+}
+.title-number{
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1;
+}
+.sub-number{
+	font-size: 11px;
+	color:#999!important;
+	font-weight: 500!important;
+}
+
+/*********************
+/*--------DATA------*/
+/*thumbnail*/
+.data_container .thumbnail{
+	text-align: justify;
+}
+
+.data_container .thumbnail h4{
+	/*text-align: center;*/
+	font-weight: 500;
+}
+
+.thumbnail a>img, .thumbnail>img{
+	margin-top: 10px;
+	width: 100px;
+}
+
+.info_file{
+	color: #3db39e;
+    font-weight: 600;
+    font-size: 13px;
+}
+#upload_data{
+	margin-top: 30px;
+}
+
+/*--------BUTTON ScrollToTop------*/
+.scrollup {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	display: none;
+	color: white;
+	background-color: #2d4059;
+	border: 1px solid #2d4059;
+	border-radius:40px;
+	font-size: 20px;
+	text-align: center;
+	line-height: 50px;
+	z-index: 2;
+}
+ 
+.scrollup:hover {
+	color: white;
+	background-color: #1c2837;
+	border-color: #1c2837;
+}
+
+
+
+
+/****************************************************************
+--------------------------------RESPONSIVE------*/
+/****************************************************************/
+@media (max-width:767px){
+	/***** DASHBOARD******/
+	#select_localisation{
+	padding: 2px 20px 2px 20px;
+	}
+	/*** NAVBAR ***/
+	.navbar-default .navbar-toggle{
+		border-color: rgba(255, 255, 255, 0);
+	}
+
+	.navbar-brand{
+		font-size:16px;
+	}
+
+	/***** Home******/
+	.home_container{
+		padding-left: 20px;
+    	padding-right: 20px;
+	}
+
+	.logo_index{
+		width: 70%;
+    	margin: 15px;
+	}
+
+	.home_title p {
+	    font-size: 16px;
+	}
+
+	.home_text p{
+		font-size: 14px;
+	}
+
+	h2{
+		font-size: 22px;
+	}
+
+	h3{
+		font-size: 20px;
+	}
+
+	.grid figcaption{
+		font-size: 14px!important;
+	}
+
+	.grid figcaption{
+		padding: 12px!important;
+	}
+
+	.grid{
+		padding: 0px 0px 0px 0px!important
+	}
+
+	.grid li {
+		min-width: 270px!important;
+	}
+
+}
+
+@media (min-width: 768px){
+	/*** NAVBAR ***/
+	.navbar-nav {
+		float:right;
+	}
+	
+	/***** Home******/
+	.home_container{
+		padding-right:70px;
+		padding-left: 70px;
+	}
+
+	.logo_index{
+		width: 50%;
+    	margin: 20px;
+	}
+
+
+
+	/***** DASHBOARD******/
+	#select_localisation{
+	padding: 2px 200px 2px 200px;
+	}
+
+	/***** DATA******/
+	.data_container{
+		padding-right:70px;
+		padding-left: 70px;
+	}
+}
