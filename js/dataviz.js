@@ -270,44 +270,49 @@ charts_eco["chart_eco_1"] = chart_eco_1;
 
 
 // // CHART 3 - Bar - Répartition des emplois selon la taille 
-//      var ctx_eco_3 = document.getElementById("chart_eco_3");
-//      var chart_eco_3 = new Chart(ctx_eco_3, {
-//           type: 'bar',
-//           data: {
-//               labels: [],
-//               datasets: [{
-//                   label: 'EPCI',
-//                   data: [],
-//                   backgroundColor: [
-//                       'rgba(255, 212, 96,0.9)',
-//                       'rgba(255, 212, 96,0.9)'
-//                   ],
-//                   borderColor: [
-//                       'rgba(255, 212, 96,1)',
-//                       'rgba(255, 212, 96,1)'
-//                   ],
-//                   borderWidth: 1
-//               }]
-//           },
-//           options: {
-//               scales: {
-//                   yAxes: [{
-//                       ticks: {
-//                           beginAtZero:true
-//                       }
-//                   }]
-//               },
-//               tooltips: {
-//                   callbacks: {
-//                       label: function(tooltipItem, data) {
-//                           return parseFloat(tooltipItem.yLabel.toFixed(0)).toLocaleString() + " %";
-//                       }
-//                   }
-//               }
-//           }
-//       });
-// //Intégration du graphique chart_2 dans l'objet charts_soc
-//   charts_eco["chart_eco_3"] = chart_eco_3;
+     var ctx_eco_3 = document.getElementById("chart_eco_3");
+     var chart_eco_3 = new Chart(ctx_eco_3, {
+          type: 'bar',
+          data: {
+              labels: [],
+              datasets: [{
+                  label: 'EPCI',
+                  data: [],
+                  backgroundColor: [
+                      'rgba(255, 212, 96,0.9)',
+                      'rgba(255, 212, 96,0.9)',
+                      'rgba(255, 212, 96,0.9)',
+                      'rgba(255, 212, 96,0.9)'
+                  ],
+                  borderColor: [
+                      'rgba(255, 212, 96,1)',
+                      'rgba(255, 212, 96,1)',
+                      'rgba(255, 212, 96,0.9)',
+                      'rgba(255, 212, 96,0.9)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true,
+                          max:50
+                      }
+                  }]
+              },
+              tooltips: {
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          return parseFloat(tooltipItem.yLabel.toFixed(0)).toLocaleString() + " %";
+                      }
+                  }
+              }
+          }
+      });
+//Intégration du graphique chart_2 dans l'objet charts_soc
+  charts_eco["chart_eco_3"] = chart_eco_3;
 
 
 // CHART 4 - Doughnut - Répartition des emplois selon les secteurs
