@@ -151,7 +151,7 @@
                                 </div>
                             </div>
                         </div>          
-                        <div class="col-md-6">
+                        <div class="col-md-6" >
                             <div class="panel panel-default">
                                 <div class="panel-body panel-text">
                                     <canvas id="chart_soc_2" width="" height="111"></canvas>
@@ -185,7 +185,99 @@
                             </div>
                         </div>  
                     </div>
-                    <!-- /.ROW B -->
+                    <!-- /.ROW C -->
+                    <h4 class="titleSubDim">Inégalités, pauvreté & exclusion</h4>	
+                    <!-- ROW B Inégalités, pauvreté et exclusion-->
+                    <div class="row" style="margin-left:0;">                         
+                        <div class="col-md-2">
+                            <div class="row numberSocial"> 
+                                <div class="panel panel-default">
+                                    <div class="panel-body panel-graph"> 
+                                        <img src="img/social_fammone.svg" style="width:30%;">  
+                                        <p style="margin:-10px 0px -5px 0px!important;">
+                                            <span id="figure_soc_5" class="figure-soc number" ></span><span class="number" style="font-size:30px;">%</span>
+                                        </p>
+                                        <p class="title-number">Part de familles monoparentales</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row numberSocial"> 
+                                <div class="panel panel-default">
+                                    <div class="panel-body panel-graph"> 
+                                        <img src="img/social_jeune_ssempl.svg" style="width:33%;">  
+                                        <p style="margin:-10px 0px -6px 0px!important;"> 
+                                            <span id="figure_soc_4" class="figure-soc number" ></span><span class="number" style="font-size:30px;">%</span>
+                                        </p>
+                                        <p class="title-number">Part des jeunes (15-24ans) ni en emploi ni en formation</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="col-md-5" style="padding-right: 0px;">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-graph">
+                                	<canvas id="chart_soc_3" width="" height="164"></canvas>
+                                    <p style="font-size:11px; line-height:1.4;">A: Ménage d'une personne, B: Autre sans famille, C: Couple sans enfant,D: Couple avec enfant, E: Famille monoparentale</p>
+                                    <p class="sub-title-graph"><b>Graphique 4:</b> Bar - Composition des ménages (en %)</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                        	<!-- Chiffres clés en haut-->
+                        	<div class="row">
+                        		<!--Number 1-->
+                        		<div class="col-md-6">
+                        			<div class="numberSocial"> 
+		                                <div class="panel panel-default">
+		                                    <div class="panel-body panel-graph"> 
+		                                        <img src="img/social_tx_pauvrete.svg" style="width:34%;">  
+		                                        <p style="margin:-10px 0px -5px 0px!important;">
+		                                            <span id="figure_soc_2" class="figure-soc number" ></span><span class="number" style="font-size:30px;">%</span>
+		                                        </p>
+		                                        <p class="title-number">Taux de pauvreté</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+		                                    </div>
+		                                </div>
+		                            </div>                        			
+                                </div>
+                                <!--/. Number1-->
+                                <!--Number 2-->
+                        		<div class="col-md-6" style="padding-left: 0;">
+                        			<div class="numberSocial"> 
+		                                <div class="panel panel-default">
+		                                    <div class="panel-body panel-graph"> 
+		                                        <img src="img/social_revenu_uc.svg" style="width:32%;">  
+		                                        <p style="margin:-10px 0px -5px 0px!important;">
+		                                            <span id="figure_soc_3" class="figure-soc number" ></span><span class="number" style="font-size:30px;">€</span>
+		                                        </p>
+		                                        <p class="title-number">Revenu médian par UC</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                                
+		                                    </div>
+		                                </div>
+		                            </div>                        			
+                                </div>
+                                <!--/. Number2-->
+                            </div>
+                            <!-- /.Chiffres clés en haut--> 
+                            <!-- BarProgress Niveau d'inégalités-->
+                            <div class="row numberSocial" style="margin: 0;">
+                            	<div class="panel panel-default" >
+		                            <div class="panel-body panel-graph" style="padding: 10px 30px;">
+						                <div class="barWrapper">                    
+						                    <div class="progress">
+						                        <div class="progress-bar" role="progressbar" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100" >   
+						                        <span  class="popOver" data-toggle="tooltip" data-placement="top" title="48"></span>  
+						                        </div>
+						                    </div>							                    
+						                </div>
+						                <p class="title-number">Niveau des inégalités (écart inter-déciles)</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>
+                                        <p style="color:#555; line-height:1;font-size: 13px;">Rapport entre le niveau de vie minimum des 10 % les plus riches et le niveau de vie maximum des 10 % les plus pauvres</p>
+		                        	</div>
+		                        </div>                             	
+                            </div>   
+                            <!-- /.BarProgress Niveau d'inégalités-->                        
+                        </div>
+                    </div>
+                    <!-- /.ROW C -->
                 </div>
             </div>  
             <!-- /.TabPanel-Social -->
@@ -467,5 +559,23 @@
     	});    	
     </script>
     <!-- /.Scroll to top -->
+
+    <!-- Progress_Bar-->
+    <script>
+        $(function () { 
+          $('[data-toggle="tooltip"]').tooltip({trigger: 'manual'}).tooltip('show');
+        });  
+
+        // $( window ).scroll(function() {   
+         // if($( window ).scrollTop() > 10){  // scroll down abit and get the action   
+          $(".progress-bar").each(function(){
+            each_bar_width = $(this).attr('aria-valuenow');
+            $(this).width(each_bar_width + '%');
+          });
+       
+         //  }  
+        // });
+    </script>
+    <!-- /.Progress_Bar-->
 
 </html>

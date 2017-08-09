@@ -565,7 +565,8 @@ charts_envir["chart_env_0"] = chart_env_0;
               scales: {
                   yAxes: [{
                       ticks: {
-                          beginAtZero:true
+                          beginAtZero:true,
+                          max:50
                       }
                   }]
               },
@@ -580,3 +581,50 @@ charts_envir["chart_env_0"] = chart_env_0;
       });
 //Intégration du graphique chart_2 dans l'objet charts_soc
   charts_soc["chart_soc_2"] = chart_soc_2;
+
+// CHART 3 - Bar - Composition des ménages
+     var ctx_soc_3 = document.getElementById("chart_soc_3");
+     var chart_soc_3 = new Chart(ctx_soc_3, {
+          type: 'bar',
+          data: {
+              labels: [],
+              datasets: [{
+                  label: 'EPCI',
+                  data: [],
+                  backgroundColor: [
+                      'rgba(61,179,158,0.9)',
+                      'rgba(61,179,158,0.9)',
+                      'rgba(61,179,158,0.9)',
+                      'rgba(61,179,158,0.9)',
+                      'rgba(61,179,158,0.9)'
+                  ],
+                  borderColor: [
+                      'rgba(61,179,158,1)',
+                      'rgba(61,179,158,1)',
+                      'rgba(61,179,158,1)',
+                      'rgba(61,179,158,1)',
+                      'rgba(61,179,158,1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true,
+                          max:50
+                      }
+                  }]
+              },
+              tooltips: {
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          return parseFloat(tooltipItem.yLabel.toFixed(1)).toLocaleString() + " %";
+                      }
+                  }
+              }
+          }
+      });
+//Intégration du graphique chart_2 dans l'objet charts_soc
+  charts_soc["chart_soc_3"] = chart_soc_3;
