@@ -3,13 +3,18 @@
 ********************************************************************************************/
 
 .h1, .h2, .h3, .h4, h1, h2, h3, h4{
-	color:#2D4059;
+	color:#213043;
 }
 
 /*--------NAVBAR------*/
 .navbar{
 	    box-shadow: 0 2px 2px rgba(85, 85, 85, 0.25), 0 1px 0 rgba(0, 0, 0, 0.03);
 }
+
+.navbar-default {
+    background-color: #213042!important;
+}
+
 a.navbar-brand{
 	font-weight: 300;
 }
@@ -36,7 +41,7 @@ a.navbar-brand{
 
 /*--------FOOTER------*/
 footer a{
-	color: #2d4059;
+	color: #213042;
 }
 
 /*--------HOME------*/
@@ -46,15 +51,10 @@ footer a{
 	padding-right: 15px;
 	padding-left: 15px;	
 }
-.home_title{	
-	text-align: center;
-}
-.home_title h1{
-	font-weight: 600;
-	color:rgb(61, 179, 158);
-}
+
 .home_title p{
-	font-size: 18px;
+	font-size: 20px;
+	font-weight: 100;
 }
 
 /*thumbnail*/
@@ -73,11 +73,15 @@ footer a{
 .home_feature{
 	text-align: justify;
 	margin-bottom: 30px;
+	font-size: 16px;
 }
-.home_feature h2{
-	font-weight: 500;
-	color: rgb(61, 179, 158);
+
+.home_center{
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 16px;
 }
+
 
 /* Figcaption */
 .grid figcaption h3{
@@ -91,16 +95,61 @@ footer a{
 .grid figcaption{
 	color: #ec605f!important;
 }
-/*highlight*/
-.home_highlight{
-	text-align: justify;
-	background-color: rgb(237, 237, 237);
-	width: 100%;
-	margin: 0;
-	padding: 20px 0px 30px 0px;
+
+
+/* VERSION 2 - HOME */
+
+#home{
+	text-align: center;
 }
-.home_highlight h2{
-	font-weight: 500;
+
+#home h2{
+	text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+#home h4{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+#home_intro {
+	background-color: #213042;
+    margin-top: -10px;
+    color: white;
+}
+
+#home_toolbox{
+	padding: 50px;
+}
+
+#home_toolbox h2{
+	/*color: #ec605f;*/
+}
+
+#home_index{
+	padding: 50px;
+    background-color: #3db39e;
+    color: white;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+#home_index h2{
+	color: #ffffff;
+}
+
+#home_services{
+	padding: 60px;
+    background-color: #f0f0f0;
+}
+
+#home_partenaires{
+	padding: 50px;
 }
 
 /*--------MAP------*/
@@ -150,7 +199,7 @@ body{
 } 
 
 .tabs-style-linebox a:hover, .tabs-style-linebox a:focus {
-    color: #2D4059;
+    color: #213042;
 }
 
 .tabs-style-linebox li a::active{
@@ -158,7 +207,7 @@ body{
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
-	background-color: #2D4059;
+	background-color: #213042;
 }
 
 .tabs-style-linebox .nav-pills>li>a:hover {
@@ -188,7 +237,7 @@ body{
 }
 
 .tabs-style-linebox a:hover::after, .tabs-style-linebox a:focus::after {
-	background: #2D4059; 
+	background: #213042; 
 }
 
 
@@ -212,7 +261,7 @@ div#localisation_select_title{
 }
 
 #localisation_select_title h5{
-	color: #2D4059;
+	color: #213042;
 	font-weight: 600;
 }
 
@@ -220,7 +269,7 @@ div#localisation_select_title{
     background-color: #ffffff;
     border: 2px solid rgba(45, 64, 89, 0.84);
     border-radius: 2px;
-    color: #2d4059;
+    color: #213042;
 }
 
 /* NAV-TABS*/
@@ -231,7 +280,7 @@ ul.nav.nav-tabs{
 	color:#b4bcc2;
 }
 .nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover{
-	border-top: 3px solid #2d4059;
+	border-top: 3px solid #213042;
     font-weight: 500;
 }
 
@@ -341,6 +390,20 @@ ul.nav.nav-tabs{
 /*********************
 /*--------DATA------*/
 /*thumbnail*/
+.data_container{
+	padding: 50px;
+}
+
+.data_container h2{
+	text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.data_text {
+	text-align: center;
+}
 .data_container .thumbnail{
 	text-align: justify;
 }
@@ -373,8 +436,8 @@ ul.nav.nav-tabs{
 	right: 50px;
 	display: none;
 	color: white;
-	background-color: #2d4059;
-	border: 1px solid #2d4059;
+	background-color: #213042;
+	border: 1px solid #213042;
 	border-radius:40px;
 	font-size: 20px;
 	text-align: center;
@@ -411,13 +474,16 @@ ul.nav.nav-tabs{
 
 	/***** Home******/
 	.home_container{
-		padding-left: 20px;
     	padding-right: 20px;
 	}
 
 	.logo_index{
 		width: 70%;
     	margin: 15px;
+	}
+
+	#home_intro {
+	    padding: 20px;
 	}
 
 	.home_title p {
@@ -467,10 +533,13 @@ ul.nav.nav-tabs{
 	}
 
 	.logo_index{
-		width: 50%;
+		width: 40%;
     	margin: 20px;
 	}
 
+	#home_intro {
+	    padding: 100px;
+	}
 
 
 	/***** DASHBOARD******/

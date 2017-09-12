@@ -64,7 +64,15 @@
                    $(".figure-eco").each( function (id, element) {
                         $(element).text(data[element.id]);
                    });
-            });
+            });                        
+            $.getJSON( "../ws/index_dd/data_progressbar.php?code_geo=" + codegeo, function( data ) {
+                    console.log(data);
+                   //Boucle sur les figures-soc présentes dans dashboard.html
+                   $(".progress-bar").each( function (id, element) {                         
+                        $(element).attr("aria-valuenow", data[element.id]).css("width",data[element.id]*100 +"%");                       
+                        $(element).find(".tooltip-inner").text(data[element.id]);
+                   });
+            });            
             $.getJSON( "../ws/index_dd/data_env.php?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les graphiques présents dans charts_eco
@@ -135,7 +143,8 @@
                         $(element).text(data[element.id]);
                    });
             });
-            $("#selected_feature").text(labelgeo);           
+            $("#selected_feature").text(labelgeo);  
+                     
         };
 
 

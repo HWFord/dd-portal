@@ -42,7 +42,7 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="box-shadow:0 0px 0px rgba(85, 85, 85, 0);">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -81,83 +81,102 @@
     <!-- /.Navigation -->
 
     <!-- Page Content -->
-    <div class="container home_container">
-    	<div class="row home_text home_title">
-    		<img src="img/logo_index_h.svg" class="logo_index"  />
-    		<!--<h1>L'index du développement durable</h1>-->
-    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-    	</div>
-    	<!-- /.row -->
-    	<!-- /thumbnail 
-        <div class="row">
-		  <div class="col-sm-6 col-md-6">
-		    <div class="thumbnail">
-		      <img src="img/globe" alt="...">
-		      <div class="caption">
-		        <h4>Portail cartographique</h4>
-		        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-		        <p><a href="map.html" class="btn btn-primary btn-sm" role="button">Accéder</a></p>
-		      </div>
+
+    <!-- Intro -->
+    <div id="home">
+	    <div id="home_intro">
+	    	<div class="home_container">
+		    	<div class="row home_text home_title">
+		    		<img src="img/home_index.svg" class="logo_index"  />
+		    		<p>Observer et appréhender l’état de développement durable des territoires et de bien-être des Bretonnes et des Bretons à travers des indices statistiques à l’échelle des intercommunalités parmi quatre dimensions (sociale, économique, environnementale et démocratique) </p>
+		    	</div>
+		    </div>	
+	    </div>
+	    <!-- /.Intro -->
+	    <!-- Accès aux outils -->
+	    <div id="home_toolbox">
+	    	<div class="home_container">
+		    	<h2>Accédez rapidement aux outils !</h2>
+		        <ul class="grid cs-style-3" style="padding-left: 0px;">
+					<li>
+						<figure>
+							<img src="img/link_map.png" alt="img04">
+							<figcaption>
+								<h3>Portail cartographique</h3>
+								<span>Cartographie des indicateurs </br> synthétiques</span>
+								<a href="map.html">Accéder</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li>
+						<figure>
+							<img src="img/link_dataviz.png" alt="img01">
+							<figcaption>
+								<h3>Tableau de bord</h3>
+								<span>Graphiques et chiffres clés </span>
+								<a href="dashboard.html">Accéder</a>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+		    </div>	
+	    </div>
+	    <!-- /.Accès aux outils -->
+	    <!-- Qu'est ce que l'index ? -->
+	    <div id="home_index">
+	    	<div class="home_container">
+	    		<img src="img/index_question.svg"/>
+		    	<h2>qu'est ce que l'index du développement durable ?</h2>
+		    	<div class="home_feature">
+		    		<p>L’index du développement durable est un outil d’observation collectif s’appuyant sur une définition commune de ce qui constitue les richesses d’un territoire, et les fondements de son développement durable. Celui-ci propose une sélection d’indicateurs permettant d’objectiver la situation des territoires bretons au regard de ces facteurs de richesse : le lien social, la qualité démocratique, le bien-être ressenti, la capacité d’innovation, la qualité de l’environnement, la santé … L’objectif de l’Index étant d’appréhender l’état de développement durable des territoires et de bien-être des Bretons et Bretonnes.</br></br>
+					Cet outil a plusieurs usages possibles. Il est support de partage des problématiques, notamment pour les portraits de territoire et un vecteur d’action collective. C’est aussi une aide à l’ingénierie mise à disposition des collectivités et des acteurs engagés pour le développement durable. </p>
+		    	</div>
 		    </div>
-		  </div>
-		  <div class="col-sm-6 col-md-6">
-		    <div class="thumbnail">
-		      <img src="img/dashboard" alt="...">
-		      <div class="caption">
-		        <h4>Tableau de bord</h4>
-		        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-		        <p><a href="#" class="btn btn-danger btn-sm" role="button">Accéder</a></p>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-        /.thumbnail -->
-        <ul class="grid cs-style-3">
-				<li>
-					<figure>
-						<img src="img/link_map.png" alt="img04">
-						<figcaption>
-							<h3>Portail cartographique</h3>
-							<span>Cartographie des indicateurs </br> synthétiques</span>
-							<a href="http://172.16.10.39/dd-portal/map.html">Accéder</a>
-						</figcaption>
-					</figure>
-				</li>
-				<li>
-					<figure>
-						<img src="img/link_dataviz.png" alt="img01">
-						<figcaption>
-							<h3>Tableau de bord</h3>
-							<span>Graphiques et chiffres clés </span>
-							<a href="http://172.16.10.39/dd-portal/dashboard.html">Accéder</a>
-						</figcaption>
-					</figure>
-				</li>
-		</ul>
+	    </div>
+	    <!-- /.Qu'est ce que l'index ? -->
+	    <!-- Les services -->
+	    <div id="home_services">
+	    	<div class="home_container">
+		    	<h2>les services de l'index</h2>
+		    	<div class="row">
+		    		<div class="col-md-4">
+		    			<img src="img/home_serv1.svg" style="width:30%;" />
+		    			<h4>Des indicateurs statistiques</h4>
+		    			<p class="home_center">Plus de quarante indicateurs statistiques répartis dans 4 dimensions</p>		    			
+		    		</div>
+		    		<div class="col-md-4">
+		    			<img src="img/home_serv2.svg" style="width:30%;"/>
+		    			<h4>Une carte interactive</h4>
+		    			<p class="home_center">Plus de quarante indicateurs statistiques répartis dans 4 dimensions</p>		    			
+		    		</div>
+		    		<div class="col-md-4">
+		    			<img src="img/home_serv3.svg" style="width:30%;"/>
+		    			<h4>Un tableau de bord pour chaque EPCI</h4>
+		    			<p class="home_center">Plus de quarante indicateurs statistiques répartis dans 4 dimensions</p>		    			
+		    		</div>
+		    		
+		    	</div>
+		    </div>	
+	    </div>
+	    <!-- /.Les services -->
+	    <!-- Le partenariat -->
+	    <div id="home_partenaires">
+	    	<div class="home_container">
+		    	<h2>un outil construit par une démarche collective</h2>
+		    	<p class="home_feature">L’Index s’inscrit dans le projet régional d’observatoire des territoires. Sa spécificité et son intérêt résident dans sa construction collective. En effet, il est le fruit d’une démarche concertée entre les différentes collectivités telles que la Région et les Départements. L’originalité de la démarche d’Index se fonde sur le croisement de réflexions collectives et d’expertise statistiques. </p>
+    			<p><a class="btn btn-primary btn-sm" href="#" role="button">En savoir plus</a></p>
+    			<!--<img src="img/home_partenariat.svg"/>-->
+		    </div>	
+	    </div>
+	    <!-- /.Le partenariat -->
+	</div>    
+    <!-- /.Page Content -->
 
-         <!-- /row -->
-         <div class="row home_text home_feature ">
-    		<h2>Lorem ipsum</h2>
-    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    	</div>
 
-    </div>
-    <!-- /.container -->    
-    <div class="row home_text home_highlight">
-        <div class="container home_container">    
-    		<h2>Lorem ipsum</h2>
-    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    		<p><a class="btn btn-primary btn-sm" href="#" role="button">En savoir plus</a></p>
-        </div>    
-    </div>
-
-    <div class="container home_container">
-    	<div class="row home_text home_feature ">
-    		<h2>Lorem ipsum</h2>
-    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-    	</div>
-    </div>
+    <!-- Button ScrollUp -->
     <a href="#" title="Haut de page" class="scrollup"><i class="glyphicon glyphicon-chevron-up"></i></a>	
+    <!-- /.Button ScrollUp -->
+
     <!-- footer -->
     <footer class="footer">
       <div class="container">
