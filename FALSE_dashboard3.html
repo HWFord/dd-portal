@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>L'index du développent durable breton</title>
+
+    <!-- Icon web page -->
+    <link rel="icon" type="image/ong" href="img/logo_index_pageweb.png" />
+    
+    <!-- Chartjs librairie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js"></script>
+    <!-- Custom CSS -->
+    <link href="css/theme.min.css" rel="stylesheet">
+    <link href="css/portal_index.css" rel="stylesheet">
+    <link href="css/sticky-footer.css" rel="stylesheet">
+    <link href="css/bootstrap-adaptive-tabs.css" rel="stylesheet">
+
+
+    
+<style>
+    body {
+        padding-top: 60px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+</style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    	<!-- Container -->
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"> 
+                    <img src="img/logo_index_bis.svg" style="width:36px;">
+                    <span>L'index du <span style="font-weight:600;">développement durable</span></span>
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Accueil</a>                    
+                    </li>
+                    <li>
+                        <a href="map.html">Portail cartographique</a>                     
+                    </li>
+                    <li class="active">
+                        <a href="dashboard.html">Tableau de bord</a>
+                    </li>
+                    <li>
+                        <a href="data.html">Données</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- /.Navigation -->
+
+
+    <!-- Select Localisation -->
+    <div id="localisation">
+    	<!-- Select EPCI -->
+    	<div id="select_localisation">
+	       <h4><span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span> Sélectionner une intercommunalité</h4> 
+			   <input id="interco_select" class="form-control" type="text" data-provide="typeahead" placeholder="Exemple: Brest Métropole">	 
+	    </div>
+	    <!-- /.Select EPCI --> 
+		<!-- Selected-feature -->
+	    <div id="localisation_select_title">
+	    	<h5><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> <span id="selected_feature"></span></h5>
+	    </div>
+	    <!-- /.Selected-feature -->
+	</div>
+	<!-- /.Select Localisation -->	       		
+
+
+    <!-- Page Content -->
+    <div class="container" id="transparent" style="display:none;">
+        <!-- Nav-tabs -->
+        <ul class="nav nav-pills nav-justified">
+          <li role="presentation" class="active"><a href="#h_sociale" role="tab" data-toggle="tab">Dimension sociale</a></li>
+          <li role="presentation"><a href="#h_economie" role="tab" data-toggle="tab">Dimension économique</a></li>          
+          <li role="presentation"><a href="#h_environnement" role="tab" data-toggle="tab">Dimension environnementale</a></li>
+          <li role="presentation"><a href="#h_démocratie" role="tab" data-toggle="tab">Dimension démocratique</a></li>
+        </ul>
+        <!-- /Nav-tabs -->
+        
+        <!-- Tab pane -->
+        <div class="tab-content">
+        	<!-- TabPanel-Social -->
+            <div role="tabpanel" class="tab-pane active" id="h_sociale">       
+                <div id="charts-container_social">
+                	<!-- ROW A Global-->
+                 	<div class="row">
+	                    <div class="col-md-5">
+	                        <div class="panel panel-default">
+	                            <div class="panel-body panel-graph">
+	                                <h4>RÉPARTITION DES INDICATEURS SYNTHÉTIQUES</h4>
+	                                <canvas id="chart_soc_0"></canvas>
+	                                <p class="sub-title-graph"><b>Graphique 1:</b> Radar - Répartition des indices des sous-dimensions</p>
+	                            </div>
+	                        </div>
+	                    </div>          
+	                    <div class="col-md-7">
+	                        <div class="panel panel-default">
+	                            <div class="panel-body panel-text">
+	                                <img src="img/dim_social.svg">
+	                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>                              
+	                            </div>
+	                        </div>
+	                    </div> 
+                 	</div>
+                 	<!-- /.ROW A -->
+                    <h4 class="titleSubDim">Éducation et formation</h4>	
+                    <!-- ROW B Education & Formation-->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-graph">
+                                    <canvas id="chart_soc_1" width="100" height="70"></canvas>
+                                    <p class="sub-title-graph"><b>Graphique 2:</b> Doughnut - Part de la population de 15-50 ans (non scolarisée) sans aucun dipôme</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+                                </div>
+                            </div>
+                        </div>          
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-text">
+                                    <canvas id="chart_soc_2" width="" height="111"></canvas>
+                                    <p style="font-size:11px; line-height:1.4;">A: Aucun diplôme ou au plus BEPC, B: Certificats d'aptitudes professionnelles - Brevet d'études professionnelles, C: Baccalauréat (général - technologique - professionnel), D: Diplôme de l'enseignement supérieur</p>
+                                    <p class="sub-title-graph"><b>Graphique 3:</b> Bar - Répartition de la population selon le niveau de formation (en %)</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-2">
+                            <div class="row numberSocial"> 
+	                            <div class="panel panel-default">
+	                                <div class="panel-body panel-graph"> 
+	                                	<img src="img/social_diplome.svg" style="width:30%;">  
+	                                	<p id="figure_soc_0" class="figure-soc number" style="margin:-8px 0px -2px 0px!important;"></p>
+	                                	<p class="title-number">Indice de diplôme</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+	                                </div>
+	                            </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <!-- /.ROW B -->
+                </div>
+            </div>  
+            <!-- /.TabPanel-Social -->
+
+        	<!-- TabPanel-Economie -->
+            <div role="tabpanel" class="tab-pane" id="h_economie">             
+                <div id="charts-container_economie">
+                	<!-- ROW A -->
+                  	<div class="row">
+	                    <div class="col-md-5">
+	                        <div class="panel panel-default">
+	                            <div class="panel-body panel-graph">
+	                                <h4>RÉPARTITION DES INDICATEURS SYNTHÉTIQUES</h4>
+	                                <canvas id="chart_eco_0"></canvas>
+	                                <p class="sub-title-graph"><b>Graphique 1:</b> Radar - Répartition des indices des sous-dimensions</p>
+	                            </div>
+	                        </div>
+	                    </div>          
+	                    <div class="col-md-7">
+	                        <div class="panel panel-default">
+	                            <div class="panel-body panel-text">                                
+	                                <img src="img/dim_eco.svg">
+	                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>                              
+	                            </div>
+	                        </div>
+	                    </div> 
+	                </div>
+	                <!-- /.ROW A -->
+	                 <h4 class="titleSubDim">Accès à l'emploi</h4>	
+                    <!-- ROW B Accès à l'emploi-->
+                    <div class="row">                                  
+                        <div class="col-md-6" style="display:none;">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-text">
+                                    <canvas id="chart_eco_1" width="100" height="48"></canvas>                            
+                                    <p class="sub-title-graph"><b>Graphique 2:</b> Ligne - Evolution mensuelle des chercheur.euse.s d'emploi de cat. ABC</br><i>Pour l'EPCI sélectionné en 2017</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="row numberEco"> 
+	                            <div class="panel panel-default">
+	                                <div class="panel-body panel-graph"> 
+	                                	<img src="img/eco_defm.svg" style="width:30%;">  
+	                                	<p style="margin:-10px 0px -5px 0px!important;">
+	                                		<span id="figure_eco_0" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
+	                                	</p>
+	                                	<p class="title-number">Évolution annuelle des chercheur.euse.s d'emploi de cat.ABC</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+	                                </div>
+	                            </div>
+                            </div>
+                            <div class="row numberEco"> 
+	                            <div class="panel panel-default">
+	                                <div class="panel-body panel-graph"> 
+	                                	<img src="img/eco_txemploi.svg" style="width:30%;">  
+	                                	<p style="margin:-10px 0px -5px 0px!important;"> 
+	                                		<span id="figure_eco_1" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
+	                                	</p>
+	                                	<p class="title-number">Taux d'emploi</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+	                                </div>
+	                            </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-graph">
+                                    <canvas id="chart_eco_2" width="100" height="79"></canvas>
+                                    <p class="sub-title-graph"><b>Graphique 3:</b> Doughnut - Part des salarié.e.s en CDI</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <!-- /.ROW B -->      
+                </div>   
+            </div>
+            <!-- /.TabPanel-Economie -->            
+            
+            <!-- TabPanel-Environnement -->
+            <div role="tabpanel" class="tab-pane" id="h_environnement">             
+                <div id="charts-container_environnement">
+	                <!-- ROW A -->
+	                <div class="row">
+	                 	<div class="col-md-5">
+	                		<div class="panel panel-default">
+	                			<div class="panel-body panel-graph">
+	                                <h4>RÉPARTITION DES INDICATEURS SYNTHÉTIQUES</h4>
+	                        		<canvas id="chart_env_0"></canvas>
+	                                <p class="sub-title-graph"><b>Graphique 1:</b> Radar - Répartition des indices des sous-dimensions</p>
+	                        	</div>
+	                        </div>
+	                    </div>       	
+	                    <div class="col-md-7">
+	                		<div class="panel panel-default">
+	                			<div class="panel-body panel-text">
+	                                <img src="img/dim_envir.svg">
+	                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>                         		
+	                        	</div>
+	                        </div>
+	                    </div> 
+                 	</div> 
+                 	<!-- /.ROW A -->    
+                </div>   
+            </div>
+            <!-- /.TabPanel-Environnement -->         
+            <!-- TabPanel-Democratie -->
+            <div role="tabpanel" class="tab-pane" id="h_démocratie"> 
+                <div id="charts-container_democratie">                	
+                 	<!-- ROW A --> 
+                 	<div class="row">
+	                    <div class="col-md-5">
+	                        <div class="panel panel-default">
+	                            <div class="panel-body panel-graph">
+	                                <h4>RÉPARTITION DES INDICATEURS SYNTHÉTIQUES</h4>
+	                                <canvas id="chart_demo_0"></canvas>
+	                                <p class="sub-title-graph"><b>Graphique 1:</b> Radar - Répartition des indices des sous-dimensions</p>
+	                            </div>
+	                        </div>
+	                    </div>          
+	                    <div class="col-md-7">
+	                        <div class="panel panel-default">
+	                            <div class="panel-body panel-text">
+	                                <img src="img/dim_demo.svg">
+	                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>                              
+	                            </div>
+	                        </div>
+	                    </div> 
+                 	</div>                   	
+                 	<!-- /.ROW A -->    
+                </div>       
+            </div>
+            <!-- /.TabPanel-Democratie --> 
+        </div>
+        <!-- /Tab pane -->
+    </div>     
+    <!-- /.container -->
+
+    <!-- button-scrollUp -->
+    <a href="#" title="Haut de page" class="scrollup"><i class="glyphicon glyphicon-chevron-up"></i></a>
+    <!-- /.button-scrollUp -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="col-sm-12 col-md-6">
+            <p class="text-muted">Un projet en partenariat avec la région Bretagne, les départements .... </p>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="">Contacts</a>                    
+                </li>
+                <li>
+                    <a href="">Crédits</a>                     
+                </li>
+                <li>
+                    <a href="#">Conditions d'utilisations</a>
+                </li>
+            </ul>        
+        </div>
+      </div>
+    </footer>
+    <!-- /.footer -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Input -->
+    <script src="js/bootstrap3-typeahead.js"></script>   
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Graphiques et Datavisualisation JS -->
+    <script src="js/dataviz.js">   </script>    
+    
+</body>
+
+	<!-- Scroll to top -->
+    <script>
+        ScrollToTop=function() {
+    	  var s = $(window).scrollTop();
+    	  if (s > 100) {
+    	    $('.scrollup').fadeIn();
+    	  } else {
+    	    $('.scrollup').fadeOut();
+    	  }
+    	 
+    	  $('.scrollup').click(function () {
+    	      $("html, body").animate({ scrollTop: 0 }, 500);
+    	      return false;
+    	  });
+    	}
+    	 
+    	StopAnimation=function() {
+    	  $("html, body").bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(){
+    	    $('html, body').stop();
+    	  });
+    	}
+    	 
+    	 
+    	$(window).scroll(function() {
+    	  ScrollToTop();
+    	  StopAnimation();
+    	});    	
+    </script>
+    <!-- /.Scroll to top -->
+
+</html>

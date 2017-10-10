@@ -314,7 +314,7 @@ charts_eco["chart_eco_1"] = chart_eco_1;
               tooltips: {
                   callbacks: {
                       label: function(tooltipItem, data) {
-                          return parseFloat(tooltipItem.yLabel.toFixed(0)).toLocaleString() + " %";
+                          return parseFloat(tooltipItem.yLabel.toFixed(1)).toLocaleString() + " %";
                       }
                   }
               }
@@ -353,7 +353,7 @@ charts_eco["chart_eco_1"] = chart_eco_1;
           tooltips: {
             callbacks: {
                 label: function(tooltipItem, data) {
-                    return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + " %";
+                    return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(0).toLocaleString() + " %";
                 }
             }
           }
