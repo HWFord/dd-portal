@@ -326,6 +326,12 @@ ul.nav.nav-tabs{
 	margin-top: 15px;
 }
 
+/* SOURCES */
+.sources{
+	text-align: left;
+	font-size: 12px;
+}
+
 /* DIMENSION SOCIAL*/
 .numberSocial{
     color: #3db39e;

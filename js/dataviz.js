@@ -167,7 +167,7 @@ var ctx_eco_0 = document.getElementById("chart_eco_0");
           data: {
               labels: [],
               datasets: [{
-                  label: "Région",
+                  label: "Moyennes des territoires",
                   backgroundColor: "rgba(45, 64, 89, 0)",
                   borderColor: "rgba(45, 64, 89, 1)",
                   pointBackgroundColor: "rgba(45, 64, 89, 1)",
@@ -378,7 +378,7 @@ charts_eco["chart_eco_1"] = chart_eco_1;
           data: {
               labels: [],
               datasets: [{
-                  label: "Région",
+                  label: "Moyennes des territoires",
                   backgroundColor: "rgba(45, 64, 89, 0)",
                   borderColor: "rgba(45, 64, 89, 1)",
                   pointBackgroundColor: "rgba(45, 64, 89, 1)",
@@ -427,7 +427,7 @@ charts_envir["chart_env_0"] = chart_env_0;
           data: {
               labels: [],
               datasets: [{
-                  label: "Région",
+                  label: "Moyennes des territoires",
                   backgroundColor: "rgba(45, 64, 89, 0)",
                   borderColor: "rgba(45, 64, 89, 1)",
                   pointBackgroundColor: "rgba(45, 64, 89, 1)",
@@ -476,7 +476,7 @@ charts_envir["chart_env_0"] = chart_env_0;
           data: {
               labels: [],
               datasets: [{
-                  label: "Région",
+                  label: "Moyennes des territoires",
                   backgroundColor: "rgba(45, 64, 89, 0)",
                   borderColor: "rgba(45, 64, 89, 1)",
                   pointBackgroundColor: "rgba(45, 64, 89, 1)",

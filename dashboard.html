@@ -134,7 +134,8 @@
 	                        <div class="panel panel-default">
 	                            <div class="panel-body panel-text">
 	                                <img src="img/dim_social.svg">
-	                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>                              
+	                                <h4 style="color:#3db39e;">Pour une cohésion sociale, le bien-être et l'épanouissement des individus</h4>
+	                                <p>Cette dimension regroupe des thèmes et des indicateurs en lien avec les questions de cohésion sociale, de bien-être et d'épanouissement des individus</p>                              
 	                            </div>
 	                        </div>
 	                    </div> 
@@ -185,9 +186,12 @@
                             </div>
                         </div>  
                     </div>
-                    <!-- /.ROW C -->
+                    <div class="row sources" style="margin-left:0;">
+						<p><i> SOURCES: Insee, RP 2013 </i></p>
+					</div>
+                    <!-- /.ROW B -->
                     <h4 class="titleSubDim">Inégalités, pauvreté & exclusion</h4>	
-                    <!-- ROW B Inégalités, pauvreté et exclusion-->
+                    <!-- ROW C Inégalités, pauvreté et exclusion-->
                     <div class="row" style="margin-left:0;">                         
                         <div class="col-md-2">
                             <div class="row numberSocial"> 
@@ -277,6 +281,9 @@
                             <!-- /.BarProgress Niveau d'inégalités-->                        
                         </div>
                     </div>
+                    <div class="row sources" style="margin-left:0;">
+						<p><i> SOURCES: Insee, RP 2013 </i></p>
+					</div>
                     <!-- /.ROW C -->
                 </div>
             </div>  
@@ -300,7 +307,8 @@
 	                        <div class="panel panel-default">
 	                            <div class="panel-body panel-text">                                
 	                                <img src="img/dim_eco.svg">
-	                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>                              
+	                                <h4 style="color:#ffd460;">Pour un développement économique favorable aux territoires bretons</h4>
+	                                <p>Cette dimension regroupe des thèmes et des indicateurs portant sur les dynamiques économiques</p>                              
 	                            </div>
 	                        </div>
 	                    </div> 
@@ -310,120 +318,135 @@
                     <!-- ROW B Accès à l'emploi-->
                     <div class="row" style="margin:0px;">
                     	<!-- COL ACCES A EMPLOI --> 
-                    	<div class="col-lg-6" style="padding-left:0px;">
+                    	<div class="col-lg-6">
 	                    	<h4 class="titleSubDim">Accès à l'emploi</h4>
-	                        <div class="col-md-4">
-	                            <div class="row numberEco"> 
+	                    	<div class="row">
+		                        <div class="col-md-4">
+		                            <div class="row numberEco"> 
+			                            <div class="panel panel-default">
+			                                <div class="panel-body panel-graph"> 
+			                                	<img src="img/eco_defm.svg" style="width:30%;">  
+			                                	<p style="margin:-10px 0px -12px 0px!important;">
+			                                		<span id="figure_eco_0" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
+			                                	</p>
+			                                	<p class="title-number">Évolution annuelle des chercheur.euse.s d'emploi de cat.ABC</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+			                                </div>
+			                            </div>
+		                            </div>
+		                            <div class="row numberEco"> 
+			                            <div class="panel panel-default">
+			                                <div class="panel-body panel-graph"> 
+			                                	<img src="img/eco_txemploi.svg" style="width:30%;">  
+			                                	<p style="margin:-10px 0px -5px 0px!important;"> 
+			                                		<span id="figure_eco_1" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
+			                                	</p>
+			                                	<p class="title-number">Taux d'emploi</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+			                                </div>
+			                            </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-md-8">
 		                            <div class="panel panel-default">
-		                                <div class="panel-body panel-graph"> 
-		                                	<img src="img/eco_defm.svg" style="width:30%;">  
-		                                	<p style="margin:-10px 0px -5px 0px!important;">
-		                                		<span id="figure_eco_0" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
-		                                	</p>
-		                                	<p class="title-number">Évolution annuelle des chercheur.euse.s d'emploi de cat.ABC</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+		                                <div class="panel-body panel-graph">
+		                                    <canvas id="chart_eco_1" width="100" height="82"></canvas>
+		                                    <p class="sub-title-graph"><b>Graphique 2:</b> Part des salarié.e.s en CDI</br><i>Pour l'EPCI sélectionné en 2013</i></p>
 		                                </div>
 		                            </div>
-	                            </div>
-	                            <div class="row numberEco"> 
-		                            <div class="panel panel-default">
-		                                <div class="panel-body panel-graph"> 
-		                                	<img src="img/eco_txemploi.svg" style="width:30%;">  
-		                                	<p style="margin:-10px 0px -5px 0px!important;"> 
-		                                		<span id="figure_eco_1" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
-		                                	</p>
-		                                	<p class="title-number">Taux d'emploi</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
-		                                </div>
-		                            </div>
-	                            </div>
-	                        </div>
-	                        <div class="col-md-8">
-	                            <div class="panel panel-default">
-	                                <div class="panel-body panel-graph">
-	                                    <canvas id="chart_eco_1" width="100" height="82"></canvas>
-	                                    <p class="sub-title-graph"><b>Graphique 2:</b> Part des salarié.e.s en CDI</br><i>Pour l'EPCI sélectionné en 2013</i></p>
-	                                </div>
-	                            </div>
-	                        </div> 
+		                        </div>
+		                    </div>
+		                    <div class="row sources">
+						    	<p><i> SOURCES: Dirrecte février 2017 - Insee, RP 2013 </i></p>
+						    </div>		                         
 	                    </div> 
 	                    <!-- /.COL ACCES A EMPLOI -->
 	                    <!-- COL EVOLUTION EMPLOI -->	                     
-                    	<div class="col-lg-6" style="padding-right: 0px;">
+                    	<div class="col-lg-6">
 	                    	<h4 class="titleSubDim">évolution de l'emploi de 2008 à 2013</h4>
-	                    	<div class="col-md-8" style="padding-left:0px;">
-	                            <div class="panel panel-default">
-	                                <div class="panel-body panel-graph">
-	                                    <canvas id="chart_eco_2" width="100" height="78"></canvas>
-	                                    <p class="sub-title-graph"><b>Graphique 3:</b> Nombre d'emploi en 2008 et 2013</br><i>Pour l'EPCI sélectionné en 2013</i></p>
-	                                </div>
-	                            </div>
-	                        </div>
-	                        <div class="col-md-4">
-	                            <div class="row numberEco"> 
+	                    	<div class="row">
+		                    	<div class="col-md-8" style="padding-left:0px;">
 		                            <div class="panel panel-default">
-		                                <div class="panel-body panel-graph"> 
-		                                	<img src="img/eco_evo_emploi.svg" style="width:33%;">  
-		                                	<p style="margin:-10px 0px -5px 0px!important;">
-		                                		<span id="figure_eco_2" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
-		                                	</p>
-		                                	<p class="title-number">Taux d'évolution de l'emploi</br><span class="sub-number"><i>Pour l'EPCI sélectionné</i></span></p>                                   
+		                                <div class="panel-body panel-graph">
+		                                    <canvas id="chart_eco_2" width="100" height="78"></canvas>
+		                                    <p class="sub-title-graph"><b>Graphique 3:</b> Nombre d'emploi en 2008 et 2013</br><i>Pour l'EPCI sélectionné en 2013</i></p>
 		                                </div>
 		                            </div>
-	                            </div>
-	                            <div class="row numberEco"> 
-		                            <div class="panel panel-default">
-		                                <div class="panel-body panel-graph"> 
-		                                	<img src="img/eco_evo_nbremploi.svg" style="width:33%;">  
-		                                	<p style="margin:-10px 0px -5px 0px!important;"> 
-		                                		<span id="figure_eco_3" class="figure-eco number" ></span><span class="number" style="font-size:18px;"></span>
-		                                	</p>
-		                                	<p class="title-number">Évolution du nombre d'emplois </br><span class="sub-number"><i>Pour l'EPCI sélectionné </i></span></p>                                   
-		                                </div>
+		                        </div>
+		                        <div class="col-md-4">
+		                            <div class="row numberEco"> 
+			                            <div class="panel panel-default">
+			                                <div class="panel-body panel-graph"> 
+			                                	<img src="img/eco_evo_emploi.svg" style="width:33%;">  
+			                                	<p style="margin:-10px 0px -12px 0px!important;">
+			                                		<span id="figure_eco_2" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
+			                                	</p>
+			                                	<p class="title-number">Taux d'évolution de l'emploi</br><span class="sub-number"><i>Pour l'EPCI sélectionné</i></span></p>                                   
+			                                </div>
+			                            </div>
 		                            </div>
-	                            </div>
-	                        </div>	                         
+		                            <div class="row numberEco"> 
+			                            <div class="panel panel-default">
+			                                <div class="panel-body panel-graph"> 
+			                                	<img src="img/eco_evo_nbremploi.svg" style="width:33%;">  
+			                                	<p style="margin:-10px 0px -5px 0px!important;"> 
+			                                		<span id="figure_eco_3" class="figure-eco number" ></span><span class="number" style="font-size:18px;"></span>
+			                                	</p>
+			                                	<p class="title-number">Évolution du nombre d'emplois </br><span class="sub-number"><i>Pour l'EPCI sélectionné </i></span></p>                                   
+			                                </div>
+			                            </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div class="row sources">
+						    	<p><i> SOURCES: Insee, RP 2013 </i></p>
+						    </div>		                        	                         
 	                    </div> 
 	                    <!-- /.COL EVOLUTION EMPLOI --> 
                     </div>
                     <!-- /.ROW B --> 
                     <!-- ROW C Ancrage local et robustesse du tissu économique-->
-		            <div class="row" style="margin-left: 0px;">
+		            <div class="row" style="margin: 0px;">
 		            	<h4 class="titleSubDim">Ancrage local et robustesse du tissu économique</h4>
-		                <div class="col-md-2">
-		                    <div class="row numberEco"> 
-		                        <div class="panel panel-default">
-		                            <div class="panel-body panel-graph"> 
-		                                <img src="img/eco_herfin_taille.svg" style="width:30%;">  
-		                                <p id="figure_eco_5" class="figure-eco number" style="margin:-8px 0px -2px 0px!important;"></p>
-		                                <p class="title-number">Indice d'Herfindahl (taille) </br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
-		                            </div>
-		                        </div>
-		                    </div>
-		                    <div class="row numberEco"> 
-		                        <div class="panel panel-default">
-		                            <div class="panel-body panel-graph"> 
-		                                <img src="img/eco_herfin_secteur.svg" style="width:30%;">  
-		                                <p id="figure_eco_4" class="figure-eco number" style="margin:-8px 0px -2px 0px!important;"></p>
-		                                <p class="title-number">Indice d'Herfindahl (secteur)</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
-		                            </div>
-		                        </div>
-		                    </div>
-		                </div>
-		                <div class="col-md-6" style="padding-right: 0px;">
-		                    <div class="panel panel-default">
-		                        <div class="panel-body panel-text">
-		                            <canvas id="chart_eco_3" width="100" height="44"></canvas>                            
-		                            <p class="sub-title-graph"><b>Graphique 4:</b> Répartition des emplois selon la taille des établissements</br><i>Pour l'EPCI sélectionné en 2013</i></p>
-		                        </div>
-		                    </div>
-		                </div>
-		                <div class="col-md-4">
-		                    <div class="panel panel-default">
-		                        <div class="panel-body panel-graph">
-		                            <canvas id="chart_eco_4" width="100" height="70"></canvas>
-		                            <p class="sub-title-graph"><b>Graphique 5:</b> Répartition des emplois selon le secteur d'activité</br><i>Pour l'EPCI sélectionné en 2013</i></p>
-		                        </div>
-		                    </div>
-		                </div>            
+		            	<div class="row" style="margin-left: 0px;">
+			                <div class="col-md-2">
+			                    <div class="row numberEco"> 
+			                        <div class="panel panel-default">
+			                            <div class="panel-body panel-graph"> 
+			                                <img src="img/eco_herfin_taille.svg" style="width:30%;">  
+			                                <p id="figure_eco_5" class="figure-eco number" style="margin:-8px 0px -2px 0px!important;"></p>
+			                                <p class="title-number">Indice d'Herfindahl (taille) </br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+			                            </div>
+			                        </div>
+			                    </div>
+			                    <div class="row numberEco"> 
+			                        <div class="panel panel-default">
+			                            <div class="panel-body panel-graph"> 
+			                                <img src="img/eco_herfin_secteur.svg" style="width:30%;">  
+			                                <p id="figure_eco_4" class="figure-eco number" style="margin:-8px 0px -2px 0px!important;"></p>
+			                                <p class="title-number">Indice d'Herfindahl (secteur)</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			                <div class="col-md-6" style="padding-right: 0px;">
+			                    <div class="panel panel-default">
+			                        <div class="panel-body panel-text">
+			                            <canvas id="chart_eco_3" width="100" height="44"></canvas>                            
+			                            <p class="sub-title-graph"><b>Graphique 4:</b> Répartition des emplois selon la taille des établissements</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+			                        </div>
+			                    </div>
+			                </div>
+			                <div class="col-md-4">
+			                    <div class="panel panel-default">
+			                        <div class="panel-body panel-graph">
+			                            <canvas id="chart_eco_4" width="100" height="70"></canvas>
+			                            <p class="sub-title-graph"><b>Graphique 5:</b> Répartition des emplois selon le secteur d'activité</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="row sources" style="margin-left: 0px;">
+						    <p><i> SOURCES: Insee, RP 2013 </i></p>
+						</div>                
 		            </div>
 		            <!-- /.ROW C -->     
                 </div>   
@@ -497,18 +520,15 @@
     <footer class="footer">
       <div class="container">
         <div class="col-sm-12 col-md-6">
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <p class="text-muted"></p>
         </div>
         <div class="col-sm-12 col-md-6">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="">Contacts</a>                    
+                    <a href="pourallerplusloin.html">Pour aller plus loin</a>                    
                 </li>
                 <li>
-                    <a href="">Crédits</a>                     
-                </li>
-                <li>
-                    <a href="#">Conditions d'utilisations</a>
+                    <a href="contact.html">Contacts</a>                     
                 </li>
             </ul>        
         </div>
