@@ -586,8 +586,8 @@ charts_envir["chart_env_0"] = chart_env_0;
 
 // Chart 0 - Radar 
  var ctx_soc_0 = document.getElementById("chart_soc_0");
- ctx_soc_0.getContext("2d").canvas.width = 110;
- ctx_soc_0.getContext("2d").canvas.height = 80;
+ ctx_soc_0.getContext("2d").canvas.width = 100;
+ ctx_soc_0.getContext("2d").canvas.height = 68;
  var chart_soc_0 = new Chart(ctx_soc_0, {
           type: 'radar',
           data: {
@@ -616,7 +616,9 @@ charts_envir["chart_env_0"] = chart_env_0;
           options: {
             scale: {
                 ticks: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    max:1,
+                    stepSize:0.2
                 }
             },
             responsive: true
@@ -754,3 +756,81 @@ charts_envir["chart_env_0"] = chart_env_0;
       });
 //Intégration du graphique chart_2 dans l'objet charts_soc
   charts_soc["chart_soc_3"] = chart_soc_3;
+
+// CHART 4 - Bar - Population de moins de 20ans et + 65ans
+     var ctx_soc_4 = document.getElementById("chart_soc_4");
+     var chart_soc_4 = new Chart(ctx_soc_4, {
+          type: 'bar',
+          data: {
+              labels: [],
+              datasets: [{
+                  label: 'EPCI',
+                  data: [],
+                  backgroundColor: [
+                      'rgba(61,179,158,0.9)',
+                      'rgba(61,179,158,0.9)'
+                  ],
+                  borderColor: [
+                      'rgba(61,179,158,1)',
+                      'rgba(61,179,158,1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true,
+                          max:50
+                      }
+                  }]
+              },
+              tooltips: {
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          return parseFloat(tooltipItem.yLabel.toFixed(1)).toLocaleString() + " %";
+                      }
+                  }
+              }
+          }
+      });
+//Intégration du graphique chart_2 dans l'objet charts_soc
+  charts_soc["chart_soc_4"] = chart_soc_4;
+
+
+
+// CHART 5 - Donught - Part n'ayant pas eu recours au soin depuis 2ans
+          
+      var ctx_soc_5 = document.getElementById("chart_soc_5");
+      var chart_soc_5 = new Chart(ctx_soc_5, {
+        type: 'doughnut',
+        data: {
+          labels: [],
+          datasets: [{
+                  label: 'Population',
+                  data: [],
+                  backgroundColor: [
+                    "rgba(61,179,158,0.9)",
+                    "rgba(153,153,153,0.9)"
+                  ],
+                  hoverBackgroundColor: [
+                    "rgba(61,179,158,1)",
+                    "rgba(153,153,153,1)" 
+                  ],
+                  borderWidth: 3
+                }]
+        },
+        options: {
+          tooltips: {
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    return parseInt(data.datasets[0].data[tooltipItem.index]).toLocaleString() + " %";
+                }
+            }
+          }
+        }             
+      });
+           
+//Intégration du graphique chart_1 dans l'objet charts_soc
+  charts_soc["chart_soc_5"] = chart_soc_5;

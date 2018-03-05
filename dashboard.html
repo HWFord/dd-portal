@@ -150,55 +150,7 @@
 	                    </div> 
 	                </div>
 	                <!-- /.ROW A --> 
-                    <h4 class="titleSubDim">Éducation et formation</h4>	
-                    <!-- ROW B Education & Formation-->
-                    <div class="row" style="margin-right: 0;">
-                        <div class="col-md-4">
-                            <div class="panel panel-default">
-                                <div class="panel-body panel-graph">
-                                    <canvas id="chart_soc_1" width="100" height="70"></canvas>
-                                    <p class="sub-title-graph"><b>Graphique 2:</b> Part de la population de 15-50 ans (non scolarisée) sans aucun dipôme</br><i>Pour l'EPCI sélectionné en 2013</i></p>
-                                </div>
-                            </div>
-                        </div>          
-                        <div class="col-md-6" >
-                            <div class="panel panel-default">
-                                <div class="panel-body panel-text">
-                                    <canvas id="chart_soc_2" width="" height="111"></canvas>
-                                    <p style="font-size:11px; line-height:1.4;">A: Aucun diplôme ou au plus BEPC, B: Certificats d'aptitudes professionnelles - Brevet d'études professionnelles, C: Baccalauréat (général - technologique - professionnel), D: Diplôme de l'enseignement supérieur</p>
-                                    <p class="sub-title-graph"><b>Graphique 3:</b> Répartition de la population selon le niveau de formation (en %)</br><i>Pour l'EPCI sélectionné en 2013</i></p>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="col-md-2">
-                            <div class="row numberSocial"> 
-                                <div class="panel panel-default">
-                                    <div class="panel-body panel-graph"> 
-                                        <img src="img/social_diplome.svg" style="width:27%;">  
-                                        <p style="margin:-10px 0px -5px 0px!important;">
-                                            <span id="figure_soc_0" class="figure-soc number" ></span>
-                                        </p>
-                                        <p class="title-number">Indice de diplôme</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row numberSocial"> 
-                                <div class="panel panel-default">
-                                    <div class="panel-body panel-graph"> 
-                                        <img src="img/social_apprentissage.svg" style="width:33%;">  
-                                        <p style="margin:-10px 0px -6px 0px!important;"> 
-                                            <span id="figure_soc_1" class="figure-soc number" ></span><span class="number" style="font-size:30px;">%</span>
-                                        </p>
-                                        <p class="title-number">Part des apprenti.e.s parmi la population active occupée</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                    <div class="row sources" style="margin-left:0;">
-						<p><i> SOURCES: Insee, RP 2013 </i></p>
-					</div>
-                    <!-- /.ROW B -->
+                    
                     <h4 class="titleSubDim">Inégalités, pauvreté & exclusion</h4>	
                     <!-- ROW C Inégalités, pauvreté et exclusion-->
                     <div class="row" style="margin-left:0;">                         
@@ -293,7 +245,118 @@
                     <div class="row sources" style="margin-left:0;">
 						<p><i> SOURCES: Insee, RP 2013 </i></p>
 					</div>
-                    <!-- /.ROW C -->
+                    <!-- /.ROW B -->
+
+                    <h4 class="titleSubDim">Santé</h4>	
+                    <!-- ROW C SANTE-->
+                    <div class="row" style="margin: 0;">
+                    	<div class="col-md-2">
+                            <div class="row numberSocial"> 
+                                <div class="panel panel-default">
+                                    <div class="panel-body panel-graph"> 
+                                    	<img src="img/icon-soc7.svg" style="width:30%;">  
+                                        <p style="margin:-5px 0px -5px 0px!important;"> 
+                                            <span id="figure_soc_7" class="figure-soc number" ></span>
+                                        </p>
+                                        <p class="title-number">Indice comparatif de mortalité</br><span class="sub-number"><i>Pour l'EPCI sélectionné</i></span></p>        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row numberSocial"> 
+                                <div class="panel panel-default">
+                                    <div class="panel-body panel-graph" >
+                                    	<img src="img/icon-soc8.svg" style="width:30%;">  
+                                        <p style="margin:-5px 0px -5px 0px!important;"> 
+                                            <span id="figure_soc_8" class="figure-soc number" ></span>
+                                        </p>
+                                        <p class="title-number">Indice de vieillissement</br><span class="sub-number"><i>Pour l'EPCI sélectionné</i></span></p>                                                                          
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                 
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-graph">
+                                	<canvas id="chart_soc_4" width="100" height="75"></canvas>
+                                    <p class="sub-title-graph"><b>Graphique X:</b> Part de la population ayant - 20 ans et + 65 ans</br><i>Pour l'EPCI sélectionné en 2013</i></p>                                    
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-4" style="padding-left: 0;">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-graph">
+                                	<canvas id="chart_soc_5" width="100" height="72"></canvas>
+                                    <p class="sub-title-graph"><b>Graphique X:</b> Part de la population n'ayant pas eu recours aux soins depuis 2 ans </br><i>Pour l'EPCI sélectionné</i></p>                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2" style="padding: 0;">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-graph numberSocial" style="padding: 80px 10px;">
+                                    <img src="img/icon-soc9.svg" style="width:45%;">  
+                                        <p style="margin:0px!important;"> 
+                                            <span id="figure_soc_9" class="figure-soc number" ></span>
+                                        </p>
+                                        <p class="title-number">Accessibilité potentiel localisé (APL*) des médecins généralistes </br><i>ETP pour 100 000hbts</i></br><span class="sub-number"><i>Pour l'EPCI sélectionné</i></span></p>
+                                </div>
+                            </div>
+                        </div>                           
+                    </div>
+                    <div class="row sources" style="margin-left:0;">
+						<p><i> SOURCES: ORS 2012 - Insee, RP 2013 - CARSAT 2016 - DREES 2015</br> <b>* L'indice comparatif de mortalité</b> correspond au rapport entre le nombre de décès observés sur le territoire et le nombre de décès qui serait obtenu si le taux de mortalité par classe d'âge étaient identiques, sur ce territoire, aux taux nationaux.</br> <b>* L'indicateur d'Accessibilité Potentielle Localisée (APL)</b> permet de quantifier la possibilité des habitant.e.s d'accéder aux soins des médecins généralistes libéraux. Il prend en compte à la fois le niveau d'activité des médecins pour mesurer l'offre et des sollicitations en matière de soins des habitant.e.s, différenciées par âge, pour mesurer la demande.</i></p>
+					</div>
+                    <!-- /.ROW C SANTE -->
+
+
+                    <h4 class="titleSubDim">Éducation et formation</h4>	
+                    <!-- ROW  Education & Formation-->
+                    <div class="row" style="margin-right: 0;">
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-graph">
+                                    <canvas id="chart_soc_1" width="100" height="70"></canvas>
+                                    <p class="sub-title-graph"><b>Graphique 2:</b> Part de la population de 15-50 ans (non scolarisée) sans aucun dipôme</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+                                </div>
+                            </div>
+                        </div>          
+                        <div class="col-md-6" >
+                            <div class="panel panel-default">
+                                <div class="panel-body panel-text">
+                                    <canvas id="chart_soc_2" width="" height="111"></canvas>
+                                    <p style="font-size:11px; line-height:1.4;">A: Aucun diplôme ou au plus BEPC, B: Certificats d'aptitudes professionnelles - Brevet d'études professionnelles, C: Baccalauréat (général - technologique - professionnel), D: Diplôme de l'enseignement supérieur</p>
+                                    <p class="sub-title-graph"><b>Graphique 3:</b> Répartition de la population selon le niveau de formation (en %)</br><i>Pour l'EPCI sélectionné en 2013</i></p>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-md-2">
+                            <div class="row numberSocial"> 
+                                <div class="panel panel-default">
+                                    <div class="panel-body panel-graph"> 
+                                        <img src="img/social_diplome.svg" style="width:27%;">  
+                                        <p style="margin:-10px 0px -5px 0px!important;">
+                                            <span id="figure_soc_0" class="figure-soc number" ></span>
+                                        </p>
+                                        <p class="title-number">Indice de diplôme</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row numberSocial"> 
+                                <div class="panel panel-default">
+                                    <div class="panel-body panel-graph"> 
+                                        <img src="img/social_apprentissage.svg" style="width:33%;">  
+                                        <p style="margin:-10px 0px -6px 0px!important;"> 
+                                            <span id="figure_soc_1" class="figure-soc number" ></span><span class="number" style="font-size:30px;">%</span>
+                                        </p>
+                                        <p class="title-number">Part des apprenti.e.s parmi la population active occupée</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="row sources" style="margin-left:0;">
+						<p><i> SOURCES: Insee, RP 2013 </i></p>
+					</div>
+                    <!-- /.ROW B -->
                 </div>
             </div>  
             <!-- /.TabPanel-Social -->
