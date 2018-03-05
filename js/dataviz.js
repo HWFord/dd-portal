@@ -37,7 +37,7 @@
 
     var change_codegeo = function (codegeo, labelgeo) {
       $("#transparent").hide()
-            $.getJSON( "../ws/index_dd/data_eco.php?code_geo=" + codegeo, function( data ) {
+            $.getJSON( "../ws/index_dd/data_eco.php.static?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les graphiques présents dans charts_eco
                    $.each(charts_eco, function (name, chart) {
@@ -58,14 +58,14 @@
                    $("#transparent").show();
                    
             }); 
-            $.getJSON( "../ws/index_dd/data_eco_figures.php?code_geo=" + codegeo, function( data ) {
+            $.getJSON( "../ws/index_dd/data_eco_figures.php.static?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les figures-soc présentes dans dashboard.html
                    $(".figure-eco").each( function (id, element) {
                         $(element).text(data[element.id]);
                    });
             });                        
-            $.getJSON( "../ws/index_dd/data_progressbar.php?code_geo=" + codegeo, function( data ) {
+            $.getJSON( "../ws/index_dd/data_progressbar.php.static?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les figures-soc présentes dans dashboard.html
                    $(".progress-bar").each( function (id, element) {                         
@@ -115,7 +115,7 @@
                    $("#transparent").show();
                    
             });
-            $.getJSON( "../ws/index_dd/data_soc.php?code_geo=" + codegeo, function( data ) {
+            $.getJSON( "../ws/index_dd/data_soc.php.static?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les graphiques présents dans charts_eco
                    $.each(charts_soc, function (name, chart) {
@@ -136,7 +136,7 @@
                    $("#transparent").show();
                    
             });
-             $.getJSON( "../ws/index_dd/data_soc_figures.php?code_geo=" + codegeo, function( data ) {
+             $.getJSON( "../ws/index_dd/data_soc_figures.php.static?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les figures-soc présentes dans dashboard.html
                    $(".figure-soc").each( function (id, element) {
@@ -160,8 +160,8 @@
 
 // CHART 0 - Radar
 var ctx_eco_0 = document.getElementById("chart_eco_0");
- ctx_eco_0.getContext("2d").canvas.width = 110;
- ctx_eco_0.getContext("2d").canvas.height = 80;
+ ctx_eco_0.getContext("2d").canvas.width = 100;
+ ctx_eco_0.getContext("2d").canvas.height = 60;
  var chart_eco_0 = new Chart(ctx_eco_0, {
           type: 'radar',
           data: {
@@ -190,7 +190,9 @@ var ctx_eco_0 = document.getElementById("chart_eco_0");
           options: {
             scale: {
                 ticks: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    max:1,
+                    stepSize:0.2
                 }
             },
             responsive: true
@@ -324,7 +326,7 @@ charts_eco["chart_eco_1"] = chart_eco_1;
   charts_eco["chart_eco_3"] = chart_eco_3;
 
 
-// CHART 4 - Doughnut - Répartition des emplois selon les secteurs
+// CHART 4 - Pie - Répartition des emplois selon les secteurs
           
       var ctx_eco_4 = document.getElementById("chart_eco_4");
       var chart_eco_4 = new Chart(ctx_eco_4, {
@@ -360,8 +362,123 @@ charts_eco["chart_eco_1"] = chart_eco_1;
         }             
       });  
 
-//Intégration du graphique chart_2 dans l'objet charts_soc
+//Intégration du graphique chart_4 dans l'objet charts_eco
   charts_eco["chart_eco_4"] = chart_eco_4;
+
+// CHART 5 - Pie - Répartition des salariés selon le type d'emploi précaire
+          
+      var ctx_eco_5 = document.getElementById("chart_eco_5");
+      var chart_eco_5 = new Chart(ctx_eco_5, {
+        type: 'pie',
+        data: {
+          labels: [],
+          datasets: [{
+                  label: 'Part des emplois',
+                  data: [],
+                  backgroundColor: [   
+                    "rgba(255, 212, 96,0.9)",                
+                    "rgba(255,228,156,0.9)",
+                    "rgba(153,153,153,0.9)"
+                    
+                  ],
+                  hoverBackgroundColor: [  
+                    "rgba(255, 212, 96,1)",                  
+                    "rgba(255,228,156,1)",
+                    "rgba(153,153,153,1)"
+                    
+                  ],
+                  borderWidth: 3
+                }]
+        },
+        options: {
+          tooltips: {
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(0).toLocaleString() + " %";
+                }
+            }
+          }
+        }             
+      });  
+
+//Intégration du graphique chart_5 dans l'objet charts_eco
+  charts_eco["chart_eco_5"] = chart_eco_5;  
+
+// CHART 6 - Doughnut - Part des emplois ESS
+          
+      var ctx_eco_6 = document.getElementById("chart_eco_6");
+      var chart_eco_6 = new Chart(ctx_eco_6, {
+        type: 'doughnut',
+        data: {
+          labels: [],
+          datasets: [{
+                  label: 'Part des emplois',
+                  data: [],
+                  backgroundColor: [
+                    "rgba(255, 212, 96,0.9)",
+                    "rgba(153,153,153,0.9)"
+                  ],
+                  hoverBackgroundColor: [
+                    "rgba(255, 212, 96,1)",
+                    "rgba(153,153,153,1)" 
+                  ],
+                  borderWidth: 3
+                }]
+        },
+        options: {
+          tooltips: {
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    return parseInt(data.datasets[0].data[tooltipItem.index]).toLocaleString() + " %";
+                }
+            }
+          }
+        }             
+      });
+
+//Intégration du graphique chart_6 dans l'objet charts_eco
+charts_eco["chart_eco_6"] = chart_eco_6;  
+
+    
+
+// CHART 7 - Pie - Production d'énergie
+          
+      var ctx_eco_7 = document.getElementById("chart_eco_7");
+      var chart_eco_7 = new Chart(ctx_eco_7, {
+        type: 'pie',
+        data: {
+          labels: [],
+          datasets: [{
+                  label: '',
+                  data: [],
+                  backgroundColor: [   
+                    "rgba(255, 212, 96,0.9)",                
+                    "rgba(255,228,156,0.9)",
+                    "rgba(153,153,153,0.9)"
+                    
+                  ],
+                  hoverBackgroundColor: [  
+                    "rgba(255, 212, 96,1)",                  
+                    "rgba(255,228,156,1)",
+                    "rgba(153,153,153,1)"
+                    
+                  ],
+                  borderWidth: 3
+                }]
+        },
+        options: {
+          tooltips: {
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(0).toLocaleString() + " %";
+                }
+            }
+          }
+        }             
+      });  
+
+//Intégration du graphique chart_5 dans l'objet charts_eco
+  charts_eco["chart_eco_7"] = chart_eco_7;  
 
 
 /************* ENVIRONNEMENT ****************/   

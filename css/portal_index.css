@@ -319,6 +319,7 @@ ul.nav.nav-tabs{
 .panel-graph h4{
 	font-size: 16px;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .sub-title-graph{
@@ -326,10 +327,18 @@ ul.nav.nav-tabs{
 	margin-top: 15px;
 }
 
+.DimDef {
+	text-align: left;
+	font-size: 13px;
+}
+
+
+
 /* SOURCES */
 .sources{
 	text-align: left;
 	font-size: 12px;
+	margin-bottom: 15px;
 }
 
 /* DIMENSION SOCIAL*/
@@ -374,6 +383,7 @@ ul.nav.nav-tabs{
     border-right: 5px solid transparent; 
     border-top: 5px solid #3db39e;
 }
+
 .barWrapper{
     margin-top: 40px;
 }
@@ -392,6 +402,30 @@ ul.nav.nav-tabs{
   -webkit-box-shadow:none;
 }
 
+/* color dim social */
+.numberSocial .popOver + .tooltip > .tooltip-arrow { 
+    border-top: 5px solid #3db39e;
+}
+.numberSocial .tooltip > .tooltip-inner {
+    background-color: #3db39e; 
+}
+.numberSocial .progress-bar{
+   background:#3db39e;
+}
+
+/* color dim eco */
+.numberEco .popOver + .tooltip > .tooltip-arrow { 
+    border-top: 5px solid #ffd460;
+}
+.numberEco .tooltip > .tooltip-inner {
+    background-color: #ffd460; 
+}
+.numberEco .progress-bar{
+   background:#ffd460;
+}
+.numberEco .progress{
+   background:#aaaaaa;
+}
 
 /*********************
 /*--------DATA------*/

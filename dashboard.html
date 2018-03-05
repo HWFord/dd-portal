@@ -39,7 +39,7 @@
 
 </head>
 
-<body style="background-color: #f5f5f5;">
+<body style="background-color: /*#f5f5f5*/#ccc;">
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     	<!-- Container -->
@@ -119,28 +119,37 @@
         	<!-- TabPanel-Social -->
             <div role="tabpanel" class="tab-pane active" id="h_sociale">       
                 <div id="charts-container_social">
-                	<!-- ROW A Global-->
-                 	<div class="row">
-	                    <div class="col-md-5">
+                	<!-- ROW A -->
+                  	<div class="row">
+                  		<div class="col-md-4">
 	                        <div class="panel panel-default">
-	                            <div class="panel-body panel-graph">
-	                                <h4>RÉPARTITION DES INDICATEURS SYNTHÉTIQUES</h4>
-	                                <canvas id="chart_soc_0"></canvas>
-	                                <p class="sub-title-graph"><b>Graphique 1:</b> Répartition des indices des sous-dimensions</p>
-	                            </div>
-	                        </div>
-	                    </div>          
-	                    <div class="col-md-7">
-	                        <div class="panel panel-default">
-	                            <div class="panel-body panel-text">
+	                            <div class="panel-body panel-text">                                
 	                                <img src="img/dim_social.svg">
-	                                <h4 style="color:#3db39e;">Pour une cohésion sociale, le bien-être et l'épanouissement des individus</h4>
+	                                <h4 style="color:#3db39e;font-weight: 600;">Pour une cohésion sociale, le bien-être et l'épanouissement des individus</h4>
 	                                <p>Cette dimension regroupe des thèmes et des indicateurs en lien avec les questions de cohésion sociale, de bien-être et d'épanouissement des individus</p>                              
 	                            </div>
 	                        </div>
+	                    </div>
+	                    <div class="col-md-8">
+	                        <div class="panel panel-default">
+	                            <div class="panel-body panel-graph">
+	                                <h4>RÉPARTITION DES INDICATEURS SYNTHÉTIQUES</h4>
+	                                <div class="row">
+	                                	<div class="col-md-8">
+		                                	<canvas id="chart_soc_0"></canvas>	                                	
+		                                </div>
+		                                <div class="col-md-4 DimDef">	
+		                                	<p></br><b>Dimension E:</b> Inégalités, pauvreté, exclusion </br></br><b>Dimension F:</b> Santé</br></br><b>Dimension G:</b>  Education, formation </br></br><b>Dimension H:</b> Loisirs, culture et patrimoine</br></br><b>Dimension I:</b> Langues de Bretagne </p>
+		                                </div>
+	                                </div>
+	                                <div class="row">
+	                                	<p class="sub-title-graph"><b>Graphique 1:</b> Répartition des indices des sous-dimensions</p>
+	                                </div>                              
+	                            </div>
+	                        </div>
 	                    </div> 
-                 	</div>
-                 	<!-- /.ROW A -->
+	                </div>
+	                <!-- /.ROW A --> 
                     <h4 class="titleSubDim">Éducation et formation</h4>	
                     <!-- ROW B Education & Formation-->
                     <div class="row" style="margin-right: 0;">
@@ -201,7 +210,7 @@
                                         <p style="margin:-10px 0px -5px 0px!important;">
                                             <span id="figure_soc_5" class="figure-soc number" ></span><span class="number" style="font-size:30px;">%</span>
                                         </p>
-                                        <p class="title-number">Part de familles monoparentales</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+                                        <p class="title-number">Part de ménages monoparentales</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +230,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-body panel-graph">
                                 	<canvas id="chart_soc_3" width="" height="164"></canvas>
-                                    <p style="font-size:11px; line-height:1.4;">A: Ménage d'une personne, B: Autre sans famille, C: Couple sans enfant,D: Couple avec enfant, E: Famille monoparentale</p>
+                                    <p style="font-size:11px; line-height:1.4;">A: Ménage d'une personne, B: Autre sans famille, C: Couple sans enfant,D: Couple avec enfant, E: Ménage monoparentale</p>
                                     <p class="sub-title-graph"><b>Graphique 4:</b> Composition des ménages (en %)</br><i>Pour l'EPCI sélectionné en 2013</i></p>
                                     
                                 </div>
@@ -265,7 +274,7 @@
                             <!-- BarProgress Niveau d'inégalités-->
                             <div class="row numberSocial" style="margin: 0;">
                             	<div class="panel panel-default" >
-		                            <div class="panel-body panel-graph" style="padding: 10px 30px;">
+		                            <div class="panel-body panel-graph" style="padding: 10px 30px;">                                        
 						                <div class="barWrapper">                    
 						                    <div class="progress">
 						                        <div class="progress-bar" id="progress_soc_1" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="1" >   
@@ -294,21 +303,30 @@
                 <div id="charts-container_economie">
                 	<!-- ROW A -->
                   	<div class="row">
-	                    <div class="col-md-5">
-	                        <div class="panel panel-default">
-	                            <div class="panel-body panel-graph">
-	                                <h4>RÉPARTITION DES INDICATEURS SYNTHÉTIQUES</h4>
-	                                <canvas id="chart_eco_0"></canvas>
-	                                <p class="sub-title-graph"><b>Graphique 1:</b> Répartition des indices des sous-dimensions</p>
-	                            </div>
-	                        </div>
-	                    </div>          
-	                    <div class="col-md-7">
+                  		<div class="col-md-4">
 	                        <div class="panel panel-default">
 	                            <div class="panel-body panel-text">                                
 	                                <img src="img/dim_eco.svg">
-	                                <h4 style="color:#ffd460;">Pour un développement économique favorable aux territoires bretons</h4>
+	                                <h4 style="color:#ffd460;font-weight: 600;">Pour un développement économique favorable aux territoires bretons</h4>
 	                                <p>Cette dimension regroupe des thèmes et des indicateurs portant sur les dynamiques économiques</p>                              
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="col-md-8">
+	                        <div class="panel panel-default">
+	                            <div class="panel-body panel-graph">
+	                                <h4>RÉPARTITION DES INDICATEURS SYNTHÉTIQUES</h4>
+	                                <div class="row">
+	                                	<div class="col-md-8">
+		                                	<canvas id="chart_eco_0"></canvas>	                                	
+		                                </div>
+		                                <div class="col-md-4 DimDef">	
+		                                	<p></br><b>Dimension A:</b> Accès à l'emploi </br></br><b>Dimension B:</b> Ancrage local et robustesse du tissu économique</br></br><b>Dimension C:</b>  Qualité de l'emploi & des conditions de travail</br></br><b>Dimension D:</b> Développement économique responsable, activités pour la transition énergétique & écologique</p>
+		                                </div>
+	                                </div>
+	                                <div class="row">
+	                                	<p class="sub-title-graph"><b>Graphique 1:</b> Répartition des indices des sous-dimensions</p>
+	                                </div>                              
 	                            </div>
 	                        </div>
 	                    </div> 
@@ -326,7 +344,7 @@
 			                            <div class="panel panel-default">
 			                                <div class="panel-body panel-graph"> 
 			                                	<img src="img/eco_defm.svg" style="width:30%;">  
-			                                	<p style="margin:-10px 0px -12px 0px!important;">
+			                                	<p style="margin:-5px 0px -5px 0px!important;">
 			                                		<span id="figure_eco_0" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
 			                                	</p>
 			                                	<p class="title-number">Évolution annuelle des chercheur.euse.s d'emploi de cat.ABC</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
@@ -337,7 +355,7 @@
 			                            <div class="panel panel-default">
 			                                <div class="panel-body panel-graph"> 
 			                                	<img src="img/eco_txemploi.svg" style="width:30%;">  
-			                                	<p style="margin:-10px 0px -5px 0px!important;"> 
+			                                	<p style="margin: -11px 0px -5px 0px!important;"> 
 			                                		<span id="figure_eco_1" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
 			                                	</p>
 			                                	<p class="title-number">Taux d'emploi</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
@@ -376,7 +394,7 @@
 			                            <div class="panel panel-default">
 			                                <div class="panel-body panel-graph"> 
 			                                	<img src="img/eco_evo_emploi.svg" style="width:33%;">  
-			                                	<p style="margin:-10px 0px -12px 0px!important;">
+			                                	<p style="margin:-5px 0px -5px 0px!important;">
 			                                		<span id="figure_eco_2" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
 			                                	</p>
 			                                	<p class="title-number">Taux d'évolution de l'emploi</br><span class="sub-number"><i>Pour l'EPCI sélectionné</i></span></p>                                   
@@ -387,7 +405,7 @@
 			                            <div class="panel panel-default">
 			                                <div class="panel-body panel-graph"> 
 			                                	<img src="img/eco_evo_nbremploi.svg" style="width:33%;">  
-			                                	<p style="margin:-10px 0px -5px 0px!important;"> 
+			                                	<p style="margin:-11px 0px -5px 0px!important;"> 
 			                                		<span id="figure_eco_3" class="figure-eco number" ></span><span class="number" style="font-size:18px;"></span>
 			                                	</p>
 			                                	<p class="title-number">Évolution du nombre d'emplois </br><span class="sub-number"><i>Pour l'EPCI sélectionné </i></span></p>                                   
@@ -413,7 +431,7 @@
 			                            <div class="panel-body panel-graph"> 
 			                                <img src="img/eco_herfin_taille.svg" style="width:30%;">  
 			                                <p id="figure_eco_5" class="figure-eco number" style="margin:-8px 0px -2px 0px!important;"></p>
-			                                <p class="title-number">Indice d'Herfindahl (taille) </br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
+			                                <p class="title-number">Indice d'Herfindahl* (taille) </br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
 			                            </div>
 			                        </div>
 			                    </div>
@@ -421,7 +439,7 @@
 			                        <div class="panel panel-default">
 			                            <div class="panel-body panel-graph"> 
 			                                <img src="img/eco_herfin_secteur.svg" style="width:30%;">  
-			                                <p id="figure_eco_4" class="figure-eco number" style="margin:-8px 0px -2px 0px!important;"></p>
+			                                <p id="figure_eco_4" class="figure-eco number" style="margin:-8px 0px -3px 0px!important;"></p>
 			                                <p class="title-number">Indice d'Herfindahl (secteur)</br><span class="sub-number"><i>Pour l'EPCI sélectionné en 2013</i></span></p>                                   
 			                            </div>
 			                        </div>
@@ -438,17 +456,168 @@
 			                <div class="col-md-4">
 			                    <div class="panel panel-default">
 			                        <div class="panel-body panel-graph">
-			                            <canvas id="chart_eco_4" width="100" height="70"></canvas>
+			                            <canvas id="chart_eco_4" width="100" height="69"></canvas>
 			                            <p class="sub-title-graph"><b>Graphique 5:</b> Répartition des emplois selon le secteur d'activité</br><i>Pour l'EPCI sélectionné en 2013</i></p>
 			                        </div>
 			                    </div>
 			                </div>
 			            </div>
 			            <div class="row sources" style="margin-left: 0px;">
-						    <p><i> SOURCES: Insee, RP 2013 </i></p>
+						    <p><i> SOURCES: Insee, RP 2013 </br><b>* L'indice de Herfindhal</b> est un indice mesurant la concentration d'un type d'établissement (selon son secteur d'activité ou sa taille). Il est établi en additionnant le carré des parts de marché (généralement multipliées par 100) de toutes les entreprises du secteur considéré.</i></p>
 						</div>                
 		            </div>
-		            <!-- /.ROW C -->     
+		            <!-- /.ROW C -->   
+
+                    <!-- ROW D Qualité de l'emploi & des conditions de travail (C)-->
+                    <div class="row" style="margin: 0px;">
+                        <h4 class="titleSubDim"> Qualité de l'emploi & des conditions de travail</h4>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="panel panel-default">
+                                    <div class="panel-body panel-graph numberEco" style="padding: 83px 10px;">
+                                        <img src="img/icon-eco5.svg" style="width:85%;">  
+                                        <p>
+                                            <span id="figure_eco_6" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span>
+                                        </p>
+                                        <p class="title-number" style="margin-top: -15px;">Part des salarié.e.s en emploi précaire</br><span class="sub-number"><i>Pour l'EPCI sélectionné</i></span></p>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-body panel-graph" style="padding: 42px 10px;">
+                                        <canvas id="chart_eco_5" width="100" height="70"></canvas>
+                                        <p class="sub-title-graph"><b>Graphique 6:</b> Part des salarié.e.s en emploi précaire</br><i>Pour l'EPCI sélectionné en 2013</i></p>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- row salaire horaire net moyen-->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body panel-graph numberEco">
+                                                <img src="img/icon-eco6a.svg" style="width:25%;">  
+                                                <p>
+                                                    <span id="figure_eco_7" class="figure-eco number" ></span><span class="number" style="font-size:30px;">€</span>
+                                                </p>
+                                                <p class="title-number" style="margin-top: -15px;">Salaire horaire net moyen</br><span class="sub-number"><i>Pour l'EPCI sélectionné</i></span></p>                                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body panel-graph numberEco" style="color: #213042;">
+                                                <img src="img/icon-eco6b.svg" style="width:25%;">  
+                                                <p>
+                                                    <span class="figure-eco number" >12,54</span><span class="number" style="font-size:30px;">€</span>
+                                                </p>
+                                                <p class="title-number" style="margin-top: -15px;">Salaire horaire net moyen</br> pour les EPCI bretons</p>                                        
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <!-- row actifs selon leur lieu de résidence-->
+                                <!-- BarProgress-->
+                                <div class="row numberEco" style="margin: 0;">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body panel-graph" style="padding: 20px 30px 10px 30px;">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="img/icon-eco7a.svg" style="width:80%;"> 
+                                                </div>
+                                                <div class="col-md-4"></div>
+                                                <div class="col-md-4">
+                                                    <img src="img/icon-eco7b.svg" style="width:80%;"> 
+                                                </div>                                                
+                                            </div>
+                                            <div class="barWrapper">                    
+                                                <div class="progress">
+                                                    <div class="progress-bar" id="progress_eco_1" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" >   
+                                                    <span  class="popOver" data-toggle="tooltip" data-placement="top" title="0"></span>
+                                                    </div>
+                                                </div>                                              
+                                            </div>
+                                            <p class="title-number">Part d'actif.ve.s travaillant à +/- 30 min de leur lieu de résidence</br><span class="sub-number"><i>Pour l'EPCI sélectionné</i></span></p>                                            
+                                        </div>
+                                    </div>                              
+                                </div>   
+                                <!-- /.BarProgress Niveau d'inégalités-->
+                            </div>
+                        </div>    
+                            
+                        <div class="row sources" style="margin-left: 0px;">
+                            <p><i> SOURCES: Insee, RP 2013 - Insee, DADS 2014</i></p>
+                        </div>                
+                    </div>
+                    <!-- /.ROW D -->  
+                    <!-- ROW E Développement économique responsable, activités pour la transition énergétique & écologique (D)-->
+                    <div class="row" style="margin: 0px;">
+                        <h4 class="titleSubDim"> Développement économique responsable, activités pour la transition énergétique & écologique</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="panel panel-default">      
+                                	<div class="panel-body panel-graph">
+                                        <canvas id="chart_eco_6" width="100" height="70"></canvas>
+                                        <p class="sub-title-graph"><b>Graphique 7:</b> Part d'emplois relevant de l'Economie Sociale et Solidaire (ESS*)</br><i>Pour l'EPCI sélectionné</i></p>                                        
+                                    </div>                              
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                            	<!-- row /.Chiffre clé 9--> 
+                                <div class="row" style="margin-left: 0px;margin-right: 0px;">  
+                                	<div class="panel panel-default">
+                                        <div class="panel-body panel-graph numberEco" style="padding: 24px 10px;">
+                                        	<div class=" col-md-4">
+                                        		<img src="img/icon-eco9.svg" style="width: 80px;margin-top: 20px;">                                         		
+                                        	</div>
+                                        	<div class=" col-md-8" style="text-align: left;">
+                                        		<div class="row" style="margin: 0;">
+                                        			<p><span id="figure_eco_9" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span></p>
+                                        		</div>
+                                        		<div class="row" style="margin: 0;">
+                                        			<p class="title-number" style="margin-top: -15px;">Part de surface agricole utile dans le territoire</br><span class="sub-number"><i>Pour l'EPCI sélectionné</i></span></p>
+                                        		</div>                                        		
+                                        	</div>
+                                        </div>
+                                    </div>                                 
+                                </div>
+                                <!-- row /.Chiffre clé 9--> 
+                                <!-- row Chiffre clé 8-->
+                                <div class="row" style="margin-left: 0px;margin-right: 0px;">  
+                                	<div class="panel panel-default">
+                                        <div class="panel-body panel-graph numberEco" style="padding: 24px 10px;">
+                                        	<div class=" col-md-4">
+                                        		<img src="img/icon-eco8.svg" style="width: 80px;margin-top: 20px;">                                         		
+                                        	</div>
+                                        	<div class=" col-md-8" style="text-align: left;">
+                                        		<div class="row" style="margin: 0;">
+                                        			<p><span id="figure_eco_8" class="figure-eco number" ></span><span class="number" style="font-size:30px;">%</span></p>
+                                        		</div>
+                                        		<div class="row" style="margin: 0;">
+                                        			<p class="title-number" style="margin-top: -15px;">Part de la production d'électricité renouvelable rapportée à la consommation totale</br><span class="sub-number"><i>Pour l'EPCI sélectionné</i></span></p>
+                                        		</div>                                        		
+                                        	</div>
+                                        </div>
+                                    </div>                                 
+                                </div>
+                                <!-- row /Chiffre clé 8-->
+                            </div>
+                            <div class="col-md-4">
+                                <div class="panel panel-default">
+                                	<div class="panel-body panel-graph">
+                                        <canvas id="chart_eco_7" width="100" height="70"></canvas>
+                                        <p class="sub-title-graph"><b>Graphique 8:</b> Répartition de la production d'électricité renouvelable selon le type</br><i>Pour l'EPCI sélectionné</i></p>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                            
+                        <div class="row sources" style="margin-left: 0px;">
+                            <p><i> SOURCES: Insee, RP 2013 - CRESS 2015 - GIP Bretagne Environnement 2013 </br> <b>* L'économie sociale ou économie sociale et solidaire (ESS)</b> est la branche de l'économie regroupant les organisations privées (entreprises, coopératives, associations, mutuelles ou fondations) qui cherchent à concilier activité économique et équité sociale.</i></p>
+                        </div>                
+                    </div>
+                    <!-- /.ROW D -->
                 </div>   
             </div>
             <!-- /.TabPanel-Economie -->            
