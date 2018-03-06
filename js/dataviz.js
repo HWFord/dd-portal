@@ -834,3 +834,39 @@ charts_envir["chart_env_0"] = chart_env_0;
            
 //Intégration du graphique chart_1 dans l'objet charts_soc
   charts_soc["chart_soc_5"] = chart_soc_5;
+
+
+// CHART 6 - Donught - Part de la population avec licence sportive
+          
+      var ctx_soc_6 = document.getElementById("chart_soc_6");
+      var chart_soc_6 = new Chart(ctx_soc_6, {
+        type: 'doughnut',
+        data: {
+          labels: [],
+          datasets: [{
+                  label: 'Population',
+                  data: [],
+                  backgroundColor: [
+                    "rgba(61,179,158,0.9)",
+                    "rgba(153,153,153,0.9)"
+                  ],
+                  hoverBackgroundColor: [
+                    "rgba(61,179,158,1)",
+                    "rgba(153,153,153,1)" 
+                  ],
+                  borderWidth: 3
+                }]
+        },
+        options: {
+          tooltips: {
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    return parseInt(data.datasets[0].data[tooltipItem.index]).toLocaleString() + " %";
+                }
+            }
+          }
+        }             
+      });
+           
+//Intégration du graphique chart_1 dans l'objet charts_soc
+  charts_soc["chart_soc_6"] = chart_soc_6;
