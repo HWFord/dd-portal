@@ -870,3 +870,82 @@ charts_envir["chart_env_0"] = chart_env_0;
            
 //Intégration du graphique chart_1 dans l'objet charts_soc
   charts_soc["chart_soc_6"] = chart_soc_6;
+
+
+// CHART 7 - Bar - Taux d'élève en classe bilingue de bretons
+     var ctx_soc_7 = document.getElementById("chart_soc_7");
+     var chart_soc_7 = new Chart(ctx_soc_7, {
+          type: 'bar',
+          data: {
+              labels: [],
+              datasets: [{
+                  label: 'EPCI',
+                  data: [],
+                  backgroundColor: [
+                      'rgba(61,179,158,0.9)',
+                      'rgba(61,179,158,0.9)'
+                  ],
+                  borderColor: [
+                      'rgba(61,179,158,1)',
+                      'rgba(61,179,158,1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true,
+                          max:10
+                      }
+                  }]
+              },
+              tooltips: {
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          return parseFloat(tooltipItem.yLabel.toFixed(1)).toLocaleString() + " %";
+                      }
+                  }
+              }
+          }
+      });
+//Intégration du graphique chart_7 dans l'objet charts_soc
+  charts_soc["chart_soc_7"] = chart_soc_7;
+
+
+
+  // CHART 8 - Donught - Part suivant les cours du soir de breton
+          
+      var ctx_soc_8 = document.getElementById("chart_soc_8");
+      var chart_soc_8 = new Chart(ctx_soc_8, {
+        type: 'doughnut',
+        data: {
+          labels: [],
+          datasets: [{
+                  label: '',
+                  data: [],
+                  backgroundColor: [
+                    "rgba(61,179,158,0.9)",
+                    "rgba(153,153,153,0.9)"
+                  ],
+                  hoverBackgroundColor: [
+                    "rgba(61,179,158,1)",
+                    "rgba(153,153,153,1)" 
+                  ],
+                  borderWidth: 3
+                }]
+        },
+        options: {
+          tooltips: {
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    return parseInt(data.datasets[0].data[tooltipItem.index]).toLocaleString() + " %";
+                }
+            }
+          }
+        }             
+      });
+           
+//Intégration du graphique chart_1 dans l'objet charts_soc
+  charts_soc["chart_soc_8"] = chart_soc_8;
