@@ -949,3 +949,97 @@ charts_envir["chart_env_0"] = chart_env_0;
            
 //Intégration du graphique chart_1 dans l'objet charts_soc
   charts_soc["chart_soc_8"] = chart_soc_8;
+
+
+///***************  GRAPHIQUES SYNTHETIQUES 4 dimensions
+
+//Chart 9 - Radar dim. sociale   
+
+ var ctx_soc_9 = document.getElementById("chart_soc_9");
+ ctx_soc_9.getContext("2d").canvas.width = 90;
+ ctx_soc_9.getContext("2d").canvas.height = 50;
+ var chart_soc_9 = new Chart(ctx_soc_9, {
+          type: 'radar',
+          data: {
+              labels: [],
+              datasets: [{
+                  label: "Moyennes des territoires",
+                  backgroundColor: "rgba(45, 64, 89, 0)",
+                  borderColor: "rgba(45, 64, 89, 1)",
+                  pointBackgroundColor: "rgba(45, 64, 89, 1)",
+                  pointBorderColor: "rgba(45, 64, 89, 1)",
+                  pointHoverBackgroundColor: "#fff",
+                  pointHoverBorderColor: "rgba(45, 90, 89, 1)",
+                  data: []
+              },
+              {                  
+                  label: "EPCI",
+                  backgroundColor: "rgba(61,179,158, 0.6)",
+                  borderColor: "rgba(61,179,158, 1)",
+                  pointBackgroundColor: "rgba(61,179,158, 1)",
+                  pointBorderColor: "rgba(61,179,158, 1)",
+                  pointHoverBackgroundColor: "#fff",
+                  pointHoverBorderColor: "rgba(61,179,158, 1)",
+                  data: []
+              }]
+          },
+          options: {
+            scale: {
+                ticks: {
+                    beginAtZero: true,
+                    max:1,
+                    stepSize:0.2
+                }
+            },
+            responsive: true
+          }
+      });
+
+
+//Intégration du graphique chart_9 dans l'objet charts_soc
+  charts_soc["chart_soc_9"] = chart_soc_9;
+
+
+// CHART 8 - Radar dim. économique
+var ctx_eco_8 = document.getElementById("chart_eco_8");
+ ctx_eco_8.getContext("2d").canvas.width = 90;
+ ctx_eco_8.getContext("2d").canvas.height = 50;
+ var chart_eco_8 = new Chart(ctx_eco_8, {
+          type: 'radar',
+          data: {
+              labels: [],
+              datasets: [{
+                  label: "Moyennes des territoires",
+                  backgroundColor: "rgba(45, 64, 89, 0)",
+                  borderColor: "rgba(45, 64, 89, 1)",
+                  pointBackgroundColor: "rgba(45, 64, 89, 1)",
+                  pointBorderColor: "rgba(45, 64, 89, 1)",
+                  pointHoverBackgroundColor: "#fff",
+                  pointHoverBorderColor: "rgba(45, 90, 89, 1)",
+                  data: []
+              },
+              {                  
+                  label: "EPCI",
+                  backgroundColor: "rgba(255, 212, 96,0.6)",
+                  borderColor: "rgba(255, 212, 96, 1)",
+                  pointBackgroundColor: "rgba(255, 212, 96, 1)",
+                  pointBorderColor: "rgba(255,212,96, 1)",
+                  pointHoverBackgroundColor: "#fff",
+                  pointHoverBorderColor: "rgba(255,212,96, 1)",
+                  data: []
+              }]
+          },
+          options: {
+            scale: {
+                ticks: {
+                    beginAtZero: true,
+                    max:1,
+                    stepSize:0.2
+                }
+            },
+            responsive: true
+          }
+      });
+
+//Intégration du graphique chart_0 dans l'objet charts_eco
+charts_eco["chart_eco_8"] = chart_eco_8;

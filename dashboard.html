@@ -104,10 +104,11 @@
         <!-- Nav-tabs -->
         <div class="tabs tabs-style-linebox">
             <ul class="nav nav-pills nav-justified">
-              <li role="presentation" class="active"><a href="#h_sociale" role="tab" data-toggle="tab">Dimension sociale</a></li>
-              <li role="presentation"><a href="#h_economie" role="tab" data-toggle="tab">Dimension économique</a></li>          
-              <li role="presentation"><a href="#h_environnement" role="tab" data-toggle="tab">Dimension environnementale</a></li>
-              <li role="presentation"><a href="#h_démocratie" role="tab" data-toggle="tab">Dimension démocratique</a></li>
+            	<li role="presentation" class="active"><a href="#h_synthese" role="tab" data-toggle="tab">Synthèse</a></li>		
+              	<li role="presentation"><a href="#h_sociale" role="tab" data-toggle="tab">Dimension sociale</a></li>
+              	<li role="presentation"><a href="#h_economie" role="tab" data-toggle="tab">Dimension économique</a></li>          
+              	<li role="presentation"><a href="#h_environnement" role="tab" data-toggle="tab">Dimension environnementale</a></li>
+              	<li role="presentation"><a href="#h_démocratie" role="tab" data-toggle="tab">Dimension démocratique</a></li>
             </ul>
         </div>  
     </div>      
@@ -116,8 +117,43 @@
     <div class="container" id="transparent" style="display:none;">    
         <!-- Tab pane -->
         <div class="tab-content">
+        	<!-- TabPanel-Synthèse -->
+        	<div role="tabpanel" class="tab-pane active" id="h_synthese">
+        		<div id="charts-container_social">
+        			<h4 class="titleSubDim" style="text-align: center; margin-bottom: 25px;">Répartition des indicateurs synthétiques</h4>
+        			<div class="row">
+        				<!-- Graph Dimension Sociale -->
+        				<div class="col-md-6">
+        					<div class="panel panel-default">
+	                            <div class="panel-body panel-graph" style="padding:20px;">
+	                                <h4>DIMENSION SOCIALE</h4>
+		                            <canvas id="chart_soc_9"></canvas>
+		                            <p class="sub-title-graph"><b>Graphique 1:</b> Répartition des indices synthétique de la dimension sociale</p>
+		                            <p style="text-align: left;"></br><b>Dimension E:</b> Inégalités, pauvreté, exclusion </br><b>Dimension F:</b> Santé</br><b>Dimension G:</b>  Education, formation </br><b>Dimension H:</b> Loisirs, culture et patrimoine</br><b>Dimension I:</b> Langues de Bretagne </p>                         
+	                            </div>
+	                        </div>        					
+        				</div> 
+        				<!-- /.Graph Dimension Sociale --> 
+        				<!-- Graph Dimension Eco -->
+        				<div class="col-md-6">
+        					<div class="panel panel-default">
+	                            <div class="panel-body panel-graph" style="padding:20px;">
+	                                <h4>DIMENSION ÉCONOMIQUE</h4>
+		                            <canvas id="chart_eco_8"></canvas>
+		                            <p class="sub-title-graph"><b>Graphique 2:</b> Répartition des indices synthétique de la dimension économique</p>
+		                            <p style="text-align: left;"></br><b>Dimension A:</b> Accès à l'emploi </br><b>Dimension B:</b> Ancrage local et robustesse du tissu économique</br><b>Dimension C:</b>  Qualité de l'emploi & des conditions de travail</br><b>Dimension D:</b> Développement économique responsable, activités pour la transition énergétique & écologique</p>                         
+	                            </div>
+	                        </div>        					
+        				</div> 
+        				<!-- /.Graph Dimension Sociale -->      				
+        			</div>
+
+        		</div>	
+        	</div>	
+        	<!-- /.TabPanel-Synthèse -->
+
         	<!-- TabPanel-Social -->
-            <div role="tabpanel" class="tab-pane active" id="h_sociale">       
+            <div role="tabpanel" class="tab-pane" id="h_sociale">       
                 <div id="charts-container_social">
                 	<!-- ROW A -->
                   	<div class="row">
