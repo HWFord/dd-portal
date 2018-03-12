@@ -449,8 +449,7 @@ ul.nav.nav-tabs{
 }
 
 .data_container .thumbnail h4{
-	/*text-align: center;*/
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .thumbnail a>img, .thumbnail>img{
@@ -459,7 +458,7 @@ ul.nav.nav-tabs{
 }
 
 .info_file{
-	color: #3db39e;
+	color: #213042;
     font-weight: 600;
     font-size: 13px;
 }
