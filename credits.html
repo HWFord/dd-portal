@@ -26,7 +26,11 @@
     <style>
     body {
         padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */        
+    }
+    h4 {
+        text-align: left;
+        font-weight: 800!important;
     }
     </style>
 
@@ -82,16 +86,28 @@
 
     <!-- Page Content -->
 
-    <!-- Intro -->
+    <!-- Crédits -->
     <div id="home">
-	    <!-- Le partenariat -->
 	    <div id="home_partenaires">
 	    	<div class="home_container">
-		    	<h2>contact</h2>
-		    	<p class="home_feature">Région Bretagne </br> Direction de l'aménagement et de l'égalité (DIRAM)</br>Service Connaissance, Observation, Planification et Prospective (SCOPP)</br></br> <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="color: #3db39e;"></span> <a href="mailto:observatoire@bretagne.bzh"> observatoire@bretagne.bzh </a> </p>
-		    </div>	
+		    	<h2>Crédits</h2>
+                <h4>Informations éditoriales</h4>
+		    	<p class="home_feature"><b>Responsable de la publication</b></br>Sébastien Hamard, Directeur de l'aménagement et de l'égalité</p>
+                <p class="home_feature"><b>Conception et maintenance du site</b></br>Service connaissance, observation, planification et prospective (SCOPP) - Direction de l'aménagement et de l'égalité - Conseil régional de Bretagne</p>
+                <h4>Technologies utilisées</h4>
+                <p class="home_feature"><b>Serveur web:</b> Apache HTTP Server - Apache Tomcat </br><b>Serveur BDD:</b> PostgreSQL - PostGIS </br><b>Serveur cartographique:</b> Geoserver </br><b>Frameworks JS:</b>  OpenLayers - Proj4 - JQuery - Bootstrap - Chart JS </br><b>Icônes:</b> www.flaticon.com</p>
+                <h4>Droits d'auteur</h4>
+                <p class="home_feature">Le site diffuse divers contenus, dont certains relèvent de la catégorie des informations publiques, d’autres sont soumis au respect du Code de propriété intellectuelle.</br></br>
+                En vertu de la Loi n°78-753 du 17 juillet 1978 et l’ordonnance n°2005-650 du 6 juin 2005 relative à la liberté d'accès aux documents administratifs et à la réutilisation des informations publiques les informations publiques diffusées sur le site peuvent être utilisées par toute personne qui le souhaite à d'autres fins que celles de la mission de service public pour les besoins de laquelle les documents ont été produits ou reçus.</br></br>
+                Les informations publiques ne sont couvertes par aucun droit d'auteur, mais leur réutilisation est soumise à la condition que ces informations ne soient pas altérées, que leur sens ne soit pas dénaturé, que leurs sources (nom du site) et la date de leur dernière mise à jour soient mentionnées.), et éventuellement d'un lien renvoyant vers le document original en ligne sur ce site.
+                En revanche, concernant tous les autres documents, considérés comme des œuvres au sens du Code la Propriété Intellectuelle et diffusés, avec l’autorisation du ou des auteurs, sur le site, ils font l’objet des protections prévues par ce même code. Toute reprise est dès lors conditionnée à l'accord de l'auteur en vertu de l'article L.122-4 du Code de la Propriété Intellectuelle.
+                Ainsi, toutes les photographies présentes sur le site sont protégées par le droit d'auteur et le droit à l'image.</br></br>
+                Pour les textes, les usages autorisés sont les suivants :
+                Reproduction, diffusion ou représentation à des fins d'information privée ou professionnelle, à la condition expresse de ne pas modifier les œuvres et de mentionner la source.</br></br>
+                La Région Bretagne met à disposition gratuitement les contenus consultables sur ce site. Elle ne peut garantir l’absence de défauts ou d’irrégularités éventuellement présents sur ce site et ne garantit pas la fourniture continue du service. Elle ne peut être tenue pour responsable de toute perte, préjudice ou dommage de quelque sorte, causé à des tiers du fait de la réutilisation de ses contenus. L’éventuelle réutilisation des contenus publiés par la Région Bretagne sur ce site ne doit pas induire en erreur des tiers quant au contenu, sa source ou sa date de mise à jour.</p>
+                
+		    </div>            	
 	    </div>
-	    <!-- /.Le partenariat -->
 	</div>    
     <!-- /.Page Content -->
 
@@ -111,10 +127,10 @@
   				<li>
                 	<a href="pourallerplusloin.html">Pour aller plus loin</a>                    
                 </li>
-                <li class="active">
+                <li>
                  	<a href="contact.html">Contacts</a>                     
                 </li>
-                <li>
+                <li class="active">
                     <a href="credits.html">Crédits</a>                     
                 </li>
             </ul>        
