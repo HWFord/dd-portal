@@ -37,7 +37,7 @@
 
     var change_codegeo = function (codegeo, labelgeo) {
       $("#transparent").hide()
-            $.getJSON( "../ws/index_dd/data_eco.php.static?code_geo=" + codegeo, function( data ) {
+            $.getJSON( "../ws/index_dd/data_eco.php?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les graphiques présents dans charts_eco
                    $.each(charts_eco, function (name, chart) {
@@ -58,18 +58,18 @@
                    $("#transparent").show();
                    
             }); 
-            $.getJSON( "../ws/index_dd/data_eco_figures.php.static?code_geo=" + codegeo, function( data ) {
+            $.getJSON( "../ws/index_dd/data_eco_figures.php?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les figures-soc présentes dans dashboard.html
                    $(".figure-eco").each( function (id, element) {
                         $(element).text(data[element.id]);
                    });
             });                        
-            $.getJSON( "../ws/index_dd/data_progressbar.php.static?code_geo=" + codegeo, function( data ) {
+            $.getJSON( "../ws/index_dd/data_progressbar.php?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les figures-soc présentes dans dashboard.html
                    $(".progress-bar").each( function (id, element) {                         
-                        $(element).attr("aria-valuenow", data[element.id]).css("width",data[element.id]*100 +"%");                       
+                        $(element).attr("aria-valuenow", data[element.id]).css("width",data[element.id] +"%");                       
                         $(element).find(".tooltip-inner").text(data[element.id]);
                    });
             });            
@@ -115,7 +115,7 @@
                    $("#transparent").show();
                    
             });
-            $.getJSON( "../ws/index_dd/data_soc.php.static?code_geo=" + codegeo, function( data ) {
+            $.getJSON( "../ws/index_dd/data_soc.php?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les graphiques présents dans charts_eco
                    $.each(charts_soc, function (name, chart) {
@@ -136,7 +136,7 @@
                    $("#transparent").show();
                    
             });
-             $.getJSON( "../ws/index_dd/data_soc_figures.php.static?code_geo=" + codegeo, function( data ) {
+             $.getJSON( "../ws/index_dd/data_soc_figures.php?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les figures-soc présentes dans dashboard.html
                    $(".figure-soc").each( function (id, element) {
@@ -897,7 +897,7 @@ charts_envir["chart_env_0"] = chart_env_0;
                   yAxes: [{
                       ticks: {
                           beginAtZero:true,
-                          max:10
+                          max:15
                       }
                   }]
               },
