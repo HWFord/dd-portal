@@ -452,16 +452,18 @@ charts_eco["chart_eco_6"] = chart_eco_6;
                   label: '',
                   data: [],
                   backgroundColor: [   
-                    "rgba(255, 212, 96,0.9)",                
+                    "rgba(100,100,100,0.9)",  
+                    "rgba(255, 193, 27,0.9)",                  
                     "rgba(255,228,156,0.9)",
-                    "rgba(153,153,153,0.9)"
-                    
+                    "rgba(153,153,153,0.9)",
+                    "rgba(255, 212, 96,0.9)"        
                   ],
                   hoverBackgroundColor: [  
-                    "rgba(255, 212, 96,1)",                  
+                    "rgba(100,100,100,1)",  
+                    "rgba(255, 193, 27,1)",                  
                     "rgba(255,228,156,1)",
-                    "rgba(153,153,153,1)"
-                    
+                    "rgba(153,153,153,1)",
+                    "rgba(255, 212, 96,1)"
                   ],
                   borderWidth: 3
                 }]
@@ -483,7 +485,7 @@ charts_eco["chart_eco_6"] = chart_eco_6;
 
 /************* ENVIRONNEMENT ****************/   
 
-//Création d'un objet référençant tous les graphiques liés à l'environnement
+/*//Création d'un objet référençant tous les graphiques liés à l'environnement
  var charts_envir = {};
 
 //Chart 0 - Radar     
@@ -530,7 +532,7 @@ charts_eco["chart_eco_6"] = chart_eco_6;
 charts_envir["chart_env_0"] = chart_env_0;
 
 
-/************* DEMOCRATIE ****************/   
+************ DEMOCRATIE ***************   
 
 //Création d'un objet référençant tous les graphiques liés à la démocratie
  var charts_demo = {};
@@ -576,7 +578,7 @@ charts_envir["chart_env_0"] = chart_env_0;
 
     
 //Intégration du graphique chart_0 dans l'objet charts_demo
-    charts_demo["chart_demo_0"] = chart_demo_0;
+    charts_demo["chart_demo_0"] = chart_demo_0;*/
 
 
 /************* SOCIAL ****************/   
