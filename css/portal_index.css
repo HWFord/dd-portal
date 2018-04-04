@@ -363,22 +363,36 @@ ul.nav.nav-tabs{
 	font-weight: 500!important;
 }  
 
+/* ---- TOOLTIP DEF ----*/
+.tooltip {
+    position: fixed;
+    z-index: 1000;
+}
+.tooltip > .tooltip-inner { 
+    padding:10px; 
+}
+.def:hover {
+		text-decoration: underline;
+}
+
 
 /* ---- BAR PROGRESS ----- */
-.tooltip{ 
+.barWrapper .tooltip{ 
   position:relative;
   float:right;
   top: -38px!important;
   left: 23px!important;
 }
-.tooltip > .tooltip-inner {
+
+.barWrapper .tooltip > .tooltip-inner {
     background-color: #3db39e; 
     padding:5px 15px; 
     color:white; 
     font-weight:bold; 
     font-size:13px;
 }
-.popOver + .tooltip > .tooltip-arrow {  
+
+.barWrapper .popOver + .tooltip > .tooltip-arrow {  
     border-left: 5px solid transparent; 
     border-right: 5px solid transparent; 
     border-top: 5px solid #3db39e;
@@ -387,6 +401,7 @@ ul.nav.nav-tabs{
 .barWrapper{
     margin-top: 40px;
 }
+
 .progress{
   border-radius:0;
   overflow:visible;
@@ -394,6 +409,7 @@ ul.nav.nav-tabs{
   background-color: #e6e6e6;
   margin-bottom:5px;
 }
+
 .progress-bar{
    background:#3db39e; 
   -webkit-transition: width 1.5s ease-in-out;
@@ -402,30 +418,23 @@ ul.nav.nav-tabs{
   -webkit-box-shadow:none;
 }
 
-/* color dim social */
-.numberSocial .popOver + .tooltip > .tooltip-arrow { 
-    border-top: 5px solid #3db39e;
-}
-.numberSocial .tooltip > .tooltip-inner {
-    background-color: #3db39e; 
-}
-.numberSocial .progress-bar{
-   background:#3db39e;
-}
 
 /* color dim eco */
-.numberEco .popOver + .tooltip > .tooltip-arrow { 
+.barEco .popOver + .tooltip > .tooltip-arrow { 
     border-top: 5px solid #ffd460;
 }
-.numberEco .tooltip > .tooltip-inner {
+.barEco .tooltip > .tooltip-inner {
     background-color: #ffd460; 
 }
-.numberEco .progress-bar{
+
+.barEco .progress-bar{
    background:#ffd460;
 }
-.numberEco .progress{
+.barEco .progress{
    background:#aaaaaa;
 }
+
+
 
 /*********************
 /*--------DATA------*/
