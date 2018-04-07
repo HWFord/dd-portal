@@ -178,9 +178,9 @@ var ctx_eco_0 = document.getElementById("chart_eco_0");
               },
               {                  
                   label: "EPCI",
-                  backgroundColor: "rgba(255, 212, 96,0.6)",
-                  borderColor: "rgba(255, 212, 96, 1)",
-                  pointBackgroundColor: "rgba(255, 212, 96, 1)",
+                  backgroundColor: "rgba(255,201,57,0.6)",
+                  borderColor: "rgba(255,201,57, 1)",
+                  pointBackgroundColor: "rgba(255,201,57, 1)",
                   pointBorderColor: "rgba(255,212,96, 1)",
                   pointHoverBackgroundColor: "#fff",
                   pointHoverBorderColor: "rgba(255,212,96, 1)",
@@ -215,11 +215,11 @@ charts_eco["chart_eco_0"] = chart_eco_0;
                   label: 'Part des salarié.e.s',
                   data: [],
                   backgroundColor: [
-                    "rgba(255, 212, 96,0.9)",
+                    "rgba(255,201,57,0.9)",
                     "rgba(153,153,153,0.9)"
                   ],
                   hoverBackgroundColor: [
-                    "rgba(255, 212, 96,1)",
+                    "rgba(255,201,57,1)",
                     "rgba(153,153,153,1)" 
                   ],
                   borderWidth: 3
@@ -249,12 +249,12 @@ charts_eco["chart_eco_1"] = chart_eco_1;
                   label: 'EPCI',
                   data: [],
                   backgroundColor: [
-                      'rgba(255, 212, 96,0.9)',
-                      'rgba(255, 212, 96,0.9)'
+                      'rgba(255,201,57,0.9)',
+                      'rgba(255,201,57,0.9)'
                   ],
                   borderColor: [
-                      'rgba(255, 212, 96,1)',
-                      'rgba(255, 212, 96,1)'
+                      'rgba(255,201,57,1)',
+                      'rgba(255,201,57,1)'
                   ],
                   borderWidth: 1
               }]
@@ -263,7 +263,7 @@ charts_eco["chart_eco_1"] = chart_eco_1;
               scales: {
                   yAxes: [{
                       ticks: {
-                          beginAtZero:true
+                          //beginAtZero:true,
                       }
                   }]
               },
@@ -290,16 +290,16 @@ charts_eco["chart_eco_1"] = chart_eco_1;
                   label: 'EPCI',
                   data: [],
                   backgroundColor: [
-                      'rgba(255, 212, 96,0.9)',
-                      'rgba(255, 212, 96,0.9)',
-                      'rgba(255, 212, 96,0.9)',
-                      'rgba(255, 212, 96,0.9)'
+                      'rgba(255,201,57,0.9)',
+                      'rgba(255,201,57,0.9)',
+                      'rgba(255,201,57,0.9)',
+                      'rgba(255,201,57,0.9)'
                   ],
                   borderColor: [
-                      'rgba(255, 212, 96,1)',
-                      'rgba(255, 212, 96,1)',
-                      'rgba(255, 212, 96,0.9)',
-                      'rgba(255, 212, 96,0.9)'
+                      'rgba(255,201,57,1)',
+                      'rgba(255,201,57,1)',
+                      'rgba(255,201,57,0.9)',
+                      'rgba(255,201,57,0.9)'
                   ],
                   borderWidth: 1
               }]
@@ -340,13 +340,13 @@ charts_eco["chart_eco_1"] = chart_eco_1;
                     "rgba(100,100,100,0.9)",                    
                     "rgba(255,228,156,0.9)",
                     "rgba(153,153,153,0.9)",
-                    "rgba(255, 212, 96,0.9)"
+                    "rgba(255,201,57,0.9)"
                   ],
                   hoverBackgroundColor: [
                     "rgba(100,100,100,1)",                    
                     "rgba(255,228,156,1)",
                     "rgba(153,153,153,1)",
-                    "rgba(255, 212, 96,1)" 
+                    "rgba(255,201,57,1)" 
                   ],
                   borderWidth: 3
                 }]
@@ -376,13 +376,13 @@ charts_eco["chart_eco_1"] = chart_eco_1;
                   label: 'Part des emplois',
                   data: [],
                   backgroundColor: [   
-                    "rgba(255, 212, 96,0.9)",                
+                    "rgba(255,201,57,0.9)",                
                     "rgba(255,228,156,0.9)",
                     "rgba(153,153,153,0.9)"
                     
                   ],
                   hoverBackgroundColor: [  
-                    "rgba(255, 212, 96,1)",                  
+                    "rgba(255,201,57,1)",                  
                     "rgba(255,228,156,1)",
                     "rgba(153,153,153,1)"
                     
@@ -415,11 +415,11 @@ charts_eco["chart_eco_1"] = chart_eco_1;
                   label: 'Part des emplois',
                   data: [],
                   backgroundColor: [
-                    "rgba(255, 212, 96,0.9)",
+                    "rgba(255,201,57,0.9)",
                     "rgba(153,153,153,0.9)"
                   ],
                   hoverBackgroundColor: [
-                    "rgba(255, 212, 96,1)",
+                    "rgba(255,201,57,1)",
                     "rgba(153,153,153,1)" 
                   ],
                   borderWidth: 3
@@ -456,14 +456,14 @@ charts_eco["chart_eco_6"] = chart_eco_6;
                     "rgba(255, 193, 27,0.9)",                  
                     "rgba(255,228,156,0.9)",
                     "rgba(153,153,153,0.9)",
-                    "rgba(255, 212, 96,0.9)"        
+                    "rgba(255,209,88,0.9)"        
                   ],
                   hoverBackgroundColor: [  
                     "rgba(100,100,100,1)",  
                     "rgba(255, 193, 27,1)",                  
                     "rgba(255,228,156,1)",
                     "rgba(153,153,153,1)",
-                    "rgba(255, 212, 96,1)"
+                    "rgba(255,209,88,1)"
                   ],
                   borderWidth: 3
                 }]
@@ -1022,9 +1022,9 @@ var ctx_eco_8 = document.getElementById("chart_eco_8");
               },
               {                  
                   label: "EPCI",
-                  backgroundColor: "rgba(255, 212, 96,0.6)",
-                  borderColor: "rgba(255, 212, 96, 1)",
-                  pointBackgroundColor: "rgba(255, 212, 96, 1)",
+                  backgroundColor: "rgba(255,201,57,0.6)",
+                  borderColor: "rgba(255,201,57, 1)",
+                  pointBackgroundColor: "rgba(255,201,57, 1)",
                   pointBorderColor: "rgba(255,212,96, 1)",
                   pointHoverBackgroundColor: "#fff",
                   pointHoverBorderColor: "rgba(255,212,96, 1)",

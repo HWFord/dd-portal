@@ -421,14 +421,14 @@ ul.nav.nav-tabs{
 
 /* color dim eco */
 .barEco .popOver + .tooltip > .tooltip-arrow { 
-    border-top: 5px solid #ffd460;
+    border-top: 5px solid #FFC939;
 }
 .barEco .tooltip > .tooltip-inner {
-    background-color: #ffd460; 
+    background-color: #FFC939; 
 }
 
 .barEco .progress-bar{
-   background:#ffd460;
+   background:#FFC939;
 }
 .barEco .progress{
    background:#aaaaaa;
