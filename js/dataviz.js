@@ -1,7 +1,17 @@
 /*******************************************************************************
 ---------------------------- INPUT LOCALISATION 
 ********************************************************************************/
-
+  var nb_responses;
+  
+  var check_status = function () {
+      nb_responses += 1;
+      console.log(nb_responses);
+      if (nb_responses === 5) {
+          console.log("ready");
+          $("#transparent").show();
+          $("#status").hide();
+      }
+  };
   var $input = $("#interco_select");
         $.get("http://ows.region-bretagne.fr/geoserver/rb/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=rb:unites_administratives&outputFormat=application%2Fjson&propertyName=code_geo,nom_geo&cql_filter=level%3D%27EPCI%27", 
             function(data){            
@@ -36,7 +46,9 @@
         });
 
     var change_codegeo = function (codegeo, labelgeo) {
-      $("#transparent").hide()
+      nb_responses = 0;
+      $("#transparent").hide();
+      $("#status").show();
             $.getJSON( "../ws/index_dd/data_eco.php?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les graphiques présents dans charts_eco
@@ -55,7 +67,8 @@
                         chart.update();
                         
                    });
-                   $("#transparent").show();
+                   //$("#transparent").show();
+                  check_status();
                    
             }); 
             $.getJSON( "../ws/index_dd/data_eco_figures.php?code_geo=" + codegeo, function( data ) {
@@ -64,6 +77,7 @@
                    $(".figure-eco").each( function (id, element) {
                         $(element).text(data[element.id]);
                    });
+                   check_status();
             });                        
             $.getJSON( "../ws/index_dd/data_progressbar.php?code_geo=" + codegeo, function( data ) {
                     console.log(data);
@@ -72,8 +86,9 @@
                         $(element).attr("aria-valuenow", data[element.id]).css("width",data[element.id] +"%");                       
                         $(element).find(".tooltip-inner").text(data[element.id]);
                    });
+                   check_status();
             });            
-            $.getJSON( "../ws/index_dd/data_env.php?code_geo=" + codegeo, function( data ) {
+            /*$.getJSON( "../ws/index_dd/data_env.php?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les graphiques présents dans charts_eco
                    $.each(charts_envir, function (name, chart) {
@@ -93,7 +108,7 @@
                    });
                    $("#transparent").show();
                    
-            }); 
+            });
             $.getJSON( "../ws/index_dd/data_demo.php?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les graphiques présents dans charts_eco
@@ -114,7 +129,7 @@
                    });
                    $("#transparent").show();
                    
-            });
+            });*/
             $.getJSON( "../ws/index_dd/data_soc.php?code_geo=" + codegeo, function( data ) {
                     console.log(data);
                    //Boucle sur les graphiques présents dans charts_eco
@@ -133,7 +148,8 @@
                         chart.update();
                         
                    });
-                   $("#transparent").show();
+                   //$("#transparent").show();
+                   check_status();
                    
             });
              $.getJSON( "../ws/index_dd/data_soc_figures.php?code_geo=" + codegeo, function( data ) {
@@ -142,6 +158,7 @@
                    $(".figure-soc").each( function (id, element) {
                         $(element).text(data[element.id]);
                    });
+                   check_status();
             });
             $("#selected_feature").text(labelgeo);  
                      
@@ -192,7 +209,7 @@ var ctx_eco_0 = document.getElementById("chart_eco_0");
                 ticks: {
                     beginAtZero: true,
                     max:1,
-                    stepSize:0.2
+                    stepSize:0.5
                 }
             },
             responsive: true
@@ -620,7 +637,7 @@ charts_envir["chart_env_0"] = chart_env_0;
                 ticks: {
                     beginAtZero: true,
                     max:1,
-                    stepSize:0.2
+                    stepSize:0.5
                 }
             },
             responsive: true
@@ -990,7 +1007,7 @@ charts_envir["chart_env_0"] = chart_env_0;
                 ticks: {
                     beginAtZero: true,
                     max:1,
-                    stepSize:0.2
+                    stepSize:0.5
                 }
             },
             responsive: true
@@ -1036,7 +1053,7 @@ var ctx_eco_8 = document.getElementById("chart_eco_8");
                 ticks: {
                     beginAtZero: true,
                     max:1,
-                    stepSize:0.2
+                    stepSize:0.5
                 }
             },
             responsive: true
